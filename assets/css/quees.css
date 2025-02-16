@@ -1,0 +1,197 @@
+/* ===== QUEES =====*/
+.quees__container {
+    row-gap: 2rem;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.quees__subtitulo {
+    margin-bottom: var(--mb-1);
+    margin-top: var(--mb-1);
+}
+
+.quees__img {
+    justify-self: center;
+}
+
+.quees__img img {
+    width: 200px;
+    border-radius: 0.5rem;
+}
+
+/* ===== QUEES =====*/
+.quees__container {
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.quees__subtitulo {
+    margin-bottom: var(--mb-2);
+}
+
+.quees__text {
+    margin-bottom: var(--mb-4);
+}
+
+.quees__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-semi);
+    padding: 0.5rem 1rem;
+    margin-bottom: var(--mb-4);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+}
+
+.quees__icon {
+    font-size: 2rem;
+    margin-right: var(--mb-2);
+    color: var(--first-color);
+}
+
+.quees__names {
+    display: flex;
+    align-items: center;
+}
+
+.quees__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--first-color);
+    height: 0.25rem;
+    border-radius: 0.5rem;
+    z-index: var(--z-back);
+}
+
+.quees__html {
+    width: 95%;
+}
+
+.quees__css {
+    width: 85%;
+}
+
+.quees__js {
+    width: 65%;
+}
+
+.quees__ux {
+    width: 85%;
+}
+
+.quees__img {
+    border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .seccion {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .seccion-titulo {
+        margin-bottom: var(--mb-6);
+    }
+
+    .seccion-titulo::after {
+        width: 80px;
+        top: 3rem;
+    }
+
+    .quees__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: initial;
+    }
+
+    .quees__img img {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*===== Containers beneficios =====*/
+.beneficios__container {
+    row-gap: 2rem;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container_cards {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: -100px;
+    margin-top: -30px;
+}
+
+.container_cards .card {
+    width: 330px;
+    height: 370px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 5px;
+    text-align: center;
+    transition: all 0.25s;
+    min-width: 200px;
+    flex: 250px;
+}
+
+.container_cards .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container_cards .card img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.container_cards .card h3 {
+    font-weight: 600;
+}
+
+.container_cards .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+}
+
+.beneficios__img {
+    width: 2px;
+    height: 72px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.beneficios__subtitulo {
+    margin-bottom: var(--mb-1);
+    margin-top: var(--mb-1);
+}
+
+.beneficios__texto {
+    margin-bottom: var(--mb-4);
+}
+
+.servicios {
+    margin-top: -80px;
+}

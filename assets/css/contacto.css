@@ -1,0 +1,40 @@
+/* ===== CONTACT =====*/
+.contact__input {
+    width: 100%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--second-color);
+    outline: none;
+    margin-bottom: var(--mb-4);
+}
+
+.contact__button {
+    display: block;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: -20px;
+}
+
+@media screen and (min-width: 768px) {
+    .contact__form {
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact__container {
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

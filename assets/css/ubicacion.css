@@ -1,0 +1,53 @@
+.ubicacion__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ubicacion__mapa {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.ubicacion__horarios {
+    flex: 1;
+    text-align: center;
+}
+
+.ubicacion__horarios h3 {
+    margin-bottom: 10px;
+}
+
+.ubicacion__horarios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ubicacion__horarios li {
+    margin-bottom: 5px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .ubicacion__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ubicacion__mapa {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        /* Asegura que el mapa ocupe todo el ancho disponible */
+        display: flex;
+        justify-content: center;
+    }
+
+    .ubicacion__mapa iframe {
+        width: 100%;
+        /* Asegura que el iframe ocupe todo el ancho disponible */
+        max-width: 400px;
+        /* Ajusta el tamaño máximo del iframe */
+    }
+}

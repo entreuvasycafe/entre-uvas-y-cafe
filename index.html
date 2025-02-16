@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/icono.png">
+    <link rel="stylesheet" href="assets/css/whatsapp.css">
+    <link rel="stylesheet" href="assets/css/carrusel.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/quees.css">
+    <link rel="stylesheet" href="assets/css/galeria.css">
+    <link rel="stylesheet" href="assets/css/contacto.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/ubicacion.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+    <title>Entre Uvas y Café</title>
+</head>
+
+<body>
+    <!--===== INICIO WHATSAPP FLOTANTE =====-->
+    <div class="nav-bottom">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <div class="popup-whatsapp fadeIn">
+            <div class="content-whatsapp -top">
+                <button type="button" class="closePopup">
+                    <i class="material-icons icon-font-color">close</i>
+                </button>
+
+                <p>
+                    <img src="assets/img/secretary.png" width="50" /> ¡Hola!, Bienvenido/a a Entre Uvas y Café, ¿En qué
+                    podemos
+                    ayudarte?
+                </p>
+            </div>
+            <div class="content-whatsapp -bottom">
+                <input class="whats-input" id="whats-in" type="text" placeholder="Enviar mensaje..." />
+
+                <button class="send-msPopup" id="send-btn" type="button">
+                    <i class="material-icons icon-font-color--black">send</i>
+                </button>
+            </div>
+        </div>
+        <button type="button" id="whats-openPopup" class="whatsapp-button">
+            <div class="float">
+                <i class="fa fa-whatsapp my-float"></i>
+            </div>
+        </button>
+        <div class="circle-anime"></div>
+    </div>
+    <!--===== FIN WHATSAPP FLOTANTE =====-->
+
+    <!--===== INICIO HEADER =====-->
+    <header class="header">
+        <nav class="nav bd-grid">
+            <div class="nav__logo">
+                <a href="#">
+                    <img src="assets/img/logo-navbar.png" alt="Logo Entre Uvas y Café">
+                </a>
+                <span class="nav__title">Entre Uvas y Café</span>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#quees" class="nav__link">¿QUIENES SOMOS?</a></li>
+                    <li class="nav__item"><a href="#servicios" class="nav__link">SERVICIOS</a></li>
+                    <li class="nav__item"><a href="#productos" class="nav__link">PRODUCTOS</a></li>
+                    <li class="nav__item"><a href="#ubicacion" class="nav__link">UBICACIÓN</a></li>
+                    <li class="nav__item"><button class="boton cuatro"><span><a href="#contacto" class="nav__link">
+                                    <font color="#fff">Contacto</font>
+                                </a></span></button></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+        <!--===== FIN HEADER =====-->
+
+        <!--===== INICIO HOGAR =====-->
+        <section class="home">
+            <div class="slider">
+                <div class="slide active" style="background-image: url('assets/img/slide-1.jpg')">
+                    <div class="container">
+                        <div class="caption">
+                            <h1>EL MEJOR CAFÉ PARA TU DÍA</h1>
+                            <p>Empieza tu jornada con el <font color="#a997b2">aroma perfecto</font> y el sabor
+                                inigualable
+                                de nuestro café de especialidad.</p>
+                            <a href="#contacto">Contáctanos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('assets/img/slide-2.jpg')">
+                    <div class="container">
+                        <div class="caption">
+                            <h1>DULCES MOMENTOS</h1>
+                            <p>Disfruta de nuestra <font color="#a997b2">pastelería artesanal</font>, el complemento
+                                ideal
+                                para una experiencia única.</p>
+                            <a href="#contacto">Contáctanos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('assets/img/slide-3.jpg')">
+                    <div class="container">
+                        <div class="caption">
+                            <h1>UN ESPACIO PARA COMPARTIR</h1>
+                            <p>Ven a nuestro acogedor rincón y vive momentos especiales con quienes más quieres.</p>
+                            <a href="#contacto">Contáctanos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- controls  -->
+            <div class="controls">
+                <div class="prev">
+                    < </div>
+                        <div class="next">></div>
+                </div>
+
+                <!-- indicators -->
+                <div class="indicator">
+                </div>
+
+        </section>
+        <!--===== FIN HOGAR =====-->
+
+        <!--===== INICIO QUE ES =====-->
+        <section class="seccion quees centrado" id="quees">
+            <h2 class="seccion-titulo">¿QUÉ ES ENTRE UVAS Y CAFÉ?</h2>
+            <div class="quees__container bd-grid">
+                <div class="quees__img">
+                    <img src="assets/img/cafe.avif" alt="">
+                </div>
+                <div>
+                    <p class="quees__texto">Entre Uvas y Café es un espacio acogedor donde el café y el té se combinan
+                        para brindar una experiencia de sabor y tranquilidad. Un lugar pensado para quienes disfrutan de
+                        una pausa cálida en un ambiente relajado y armonioso.</p>
+                    <h2 class="quees__subtitulo">Un concepto versátil</h2>
+                    <p class="quees__texto">La esencia de Entre Uvas y Café radica en su flexibilidad. Ya sea que
+                        busques un rincón para desconectarte, compartir una conversación especial o simplemente
+                        disfrutar de una buena taza de café o té, aquí encontrarás el lugar perfecto.</p>
+                </div>
+            </div>
+        </section>
+        <section class="seccion servicios centrado" id="servicios">
+            <h2 class="seccion-titulo">SERVICIOS</h2>
+            <div class="beneficios__container bd-grid">
+                <div class="container_cards">
+                    <div class="card">
+                        <img class="beneficios__img" src="assets/img/cafe-icon.png">
+                        <h3 class="beneficios__subtitulo">Cafetería</h3>
+                        <p class="beneficios__texto">Disfruta de una cuidada selección de cafés y tés de alta
+                            calidad,
+                            preparados con dedicación para resaltar cada sabor y aroma.</p>
+                    </div>
+                    <div class="card">
+                        <img class="beneficios__img" src="assets/img/pasteleria-icon.png">
+                        <h3 class="beneficios__subtitulo">Pastelería Artesanal</h3>
+                        <p class="beneficios__texto">Acompaña tu bebida favorita con una variedad de postres y
+                            pastelería casera, elaborados con ingredientes naturales.</p>
+                    </div>
+                    <div class="card">
+                        <img class="beneficios__img" src="assets/img/ambiente-icon.png">
+                        <h3 class="beneficios__subtitulo">Ambiente Acogedor</h3>
+                        <p class="beneficios__texto">Un espacio pensado para la comodidad y el disfrute, ideal
+                            para
+                            relajarte o compartir un buen momento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== INICIO PRODUCTOS =====-->
+        <section class="seccion diseño centrado" id="productos">
+            <h2 class="seccion-titulo">PRODUCTOS</h2>
+            <div class="diseño__container bd-grid">
+                <div class="diseño__img">
+                    <img src="assets/img/galeria-1.png" alt="">
+                </div>
+                <div class="diseño__img">
+                    <img src="assets/img/galeria-2.png" alt="">
+                </div>
+                <div class="diseño__img">
+                    <img src="assets/img/galeria-3.png" alt="">
+                </div>
+                <div class="diseño__img">
+                    <img src="assets/img/galeria-4.png" alt="">
+                </div>
+                <div class="diseño__img">
+                    <img src="assets/img/galeria-5.png" alt="">
+                </div>
+                <div class="diseño__img">
+                    <img src="assets/img/galeria-6.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!--===== FIN PRODUCTOS =====-->
+
+        <!--===== INICIO UBICACIÓN =====-->
+        <section class="seccion ubicacion centrado" id="ubicacion">
+            <h2 class="seccion-titulo">UBICACIÓN</h2>
+            <div class="ubicacion__container bd-grid">
+                <div class="ubicacion__mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.7993803984957!2d-71.44797500024714!3d-32.576232731037145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689bbfb1b795cf9%3A0xedee69b66dc4575f!2sPasteler%C3%ADa%20artesanal%20Entre%20Uvas%20y%20Caf%C3%A9!5e0!3m2!1ses!2scl!4v1739656821867!5m2!1ses!2scl"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="ubicacion__horarios">
+                    <h3>Horarios de Atención</h3>
+                    <ul>
+                        <li><strong>Lunes a Domingo:</strong> 10:00 a 14:00 y 15:00 a 20:00</li>
+                        <li><strong>Verano:</strong> 10:00 a 14:00 y de 15:00 a 20:00</li>
+                        <li><strong>Invierno:</strong> 10:00 a 14:00 y de 15:00 a 18:00</li>
+                        <li><strong>Invierno se cierran los lunes.</strong> Durante el verano atendemos de lunes a
+                            domingo.</li>
+                    </ul>
+                    <p>Estamos ubicados en Avenida Cachagua #174, local B.</p>
+                </div>
+            </div>
+        </section>
+        <!--===== FIN UBICACIÓN =====-->
+
+        <!--===== INICIO CONTACTO =====-->
+        <section class="seccion contacto center" id="contacto">
+            <h2 class="seccion-titulo">CONTACTO</h2>
+
+            <div class="container__contacto bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" id="nombre" placeholder="Nombre" class="contact__input">
+                    <textarea id="mensaje" cols="0" rows="10" class="contact__input" placeholder="Mensaje"></textarea>
+                    <button type="button" id="enviar" style="background-color: #3e1663;"
+                        class="contact__button button">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <script defer src="assets/javascript/contacto.js"></script>
+        <!--===== FIN CONTACTO =====-->
+
+        <!--===== INICIO FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Entre Uvas y Café</p>
+            <div class="footer__logo">
+                <img src="assets/img/logo-footer.png" alt="Logo Entre Uvas y Café">
+            </div>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/profile.php?id=100070732844217" class="footer__icon"><i
+                        class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/entreuvasycafe/" class="footer__icon"><i
+                        class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/56984230531?text=Hola!%20Necesito%20informaci%C3%B3n%20sobre%20tu%20servicio%20de%20desarrollo%20web!"
+                    class="footer__icon"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+            <p>&#169; 2025 Todos los derechos reservados</p>
+        </footer>
+        <!--===== FIN FOOTER =====-->
+    </main> <!-- Cierre de la etiqueta main -->
+
+    <script defer src="assets/javascript/whatsapp.js"></script>
+    <script defer src="assets/javascript/carrusel.js"></script>
+    <script defer src="assets/javascript/header.js"></script>
+    <script defer src="assets/javascript/quees.js"></script>
+    <script defer src="assets/javascript/galeria.js"></script>
+    <script defer src="assets/javascript/contacto.js"></script>
+    <script defer src="assets/javascript/footer.js"></script>
+    <script defer src="assets/javascript/main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</body>
+
+</html>
