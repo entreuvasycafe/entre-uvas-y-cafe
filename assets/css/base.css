@@ -31,7 +31,7 @@ body {
 
 /*===== Colores =====*/
 :root {
-    --first-color: #2d3436;
+    --first-color: #7e52a7;
     --second-color: #2d3436;
 }
 
@@ -109,7 +109,7 @@ img {
 .seccion-titulo {
     position: relative;
     font-size: 25px;
-    color: var(--first-color);
+    color: var(--second-color);
     margin-top: var(--mb-2);
     margin-bottom: var(--mb-4);
     text-align: center;

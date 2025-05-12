@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/ubicacion.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+
     <title>Entre Uvas y Café</title>
 </head>
 
@@ -56,9 +56,9 @@
     <!--===== INICIO HEADER =====-->
     <header class="header">
         <nav class="nav bd-grid">
-            <div class="nav__logo">
+            <div class="footer__logo">
                 <a href="#">
-                    <img src="assets/img/logo-navbar.png" alt="Logo Entre Uvas y Café">
+                    <img src="assets/img/logo-footer.png" alt="Logo Entre Uvas y Café">
                 </a>
                 <span class="nav__title">Entre Uvas y Café</span>
             </div>
@@ -155,20 +155,20 @@
             <div class="beneficios__container bd-grid">
                 <div class="container_cards">
                     <div class="card">
-                        <img class="beneficios__img" src="assets/img/cafe-icon.png">
+                        <img class="beneficios__img" src="assets/img/cafe.avif">
                         <h3 class="beneficios__subtitulo">Cafetería</h3>
                         <p class="beneficios__texto">Disfruta de una cuidada selección de cafés y tés de alta
                             calidad,
                             preparados con dedicación para resaltar cada sabor y aroma.</p>
                     </div>
                     <div class="card">
-                        <img class="beneficios__img" src="assets/img/pasteleria-icon.png">
+                        <img class="beneficios__img" src="assets/img/galeria-1.png">
                         <h3 class="beneficios__subtitulo">Pastelería Artesanal</h3>
                         <p class="beneficios__texto">Acompaña tu bebida favorita con una variedad de postres y
                             pastelería casera, elaborados con ingredientes naturales.</p>
                     </div>
                     <div class="card">
-                        <img class="beneficios__img" src="assets/img/ambiente-icon.png">
+                        <img class="beneficios__img" src="assets/img/slide2.2.jpeg">
                         <h3 class="beneficios__subtitulo">Ambiente Acogedor</h3>
                         <p class="beneficios__texto">Un espacio pensado para la comodidad y el disfrute, ideal
                             para
@@ -177,31 +177,14 @@
                 </div>
             </div>
         </section>
-
+        <div id="productos">
+            <h1 class="seccion-titulo">Productos disponibles</h1>
+            <!-- Contenedor donde se mostrarán los productos -->
+            <section class="" id="contenedor-productos"></section>
+        </div>
+        
         <!--===== INICIO PRODUCTOS =====-->
-        <section class="seccion diseño centrado" id="productos">
-            <h2 class="seccion-titulo">PRODUCTOS</h2>
-            <div class="diseño__container bd-grid">
-                <div class="diseño__img">
-                    <img src="assets/img/galeria-1.png" alt="">
-                </div>
-                <div class="diseño__img">
-                    <img src="assets/img/galeria-2.png" alt="">
-                </div>
-                <div class="diseño__img">
-                    <img src="assets/img/galeria-3.png" alt="">
-                </div>
-                <div class="diseño__img">
-                    <img src="assets/img/galeria-4.png" alt="">
-                </div>
-                <div class="diseño__img">
-                    <img src="assets/img/galeria-5.png" alt="">
-                </div>
-                <div class="diseño__img">
-                    <img src="assets/img/galeria-6.png" alt="">
-                </div>
-            </div>
-        </section>
+        
         <!--===== FIN PRODUCTOS =====-->
 
         <!--===== INICIO UBICACIÓN =====-->
@@ -226,8 +209,14 @@
                     <p>Estamos ubicados en Avenida Cachagua #174, local B.</p>
                 </div>
             </div>
+             <!-- Elfsight Google Reviews | pruebauvasycafe -->
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-9c6f1b44-15e3-4152-a1d2-c37af611925c" data-elfsight-app-lazy></div> 
+
         </section>
         <!--===== FIN UBICACIÓN =====-->
+
+       
 
         <!--===== INICIO CONTACTO =====-->
         <section class="seccion contacto center" id="contacto">
@@ -242,6 +231,7 @@
                 </form>
             </div>
         </section>
+
 
         <script defer src="assets/javascript/contacto.js"></script>
         <!--===== FIN CONTACTO =====-->
@@ -275,6 +265,84 @@
     <script defer src="assets/javascript/main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
+   <!-- Firebase SDK y Firestore: pega esto justo antes del cierre del body -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBM2fFPK3Fb5UK-PbWIYdP-SpFZug0mt-0",
+  authDomain: "pruebaentreuvasycafe.firebaseapp.com",
+  projectId: "pruebaentreuvasycafe",
+  storageBucket: "pruebaentreuvasycafe.firebasestorage.app",
+  messagingSenderId: "971782771779",
+  appId: "1:971782771779:web:cd0eb94abdbe9cece3f0f6",
+  measurementId: "G-GFFYS8EW70"
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+// Cargar productos existentes y agrupados por categoría
+const contenedor = document.getElementById("contenedor-productos");
+
+async function cargarProductos() {
+  const querySnapshot = await getDocs(collection(db, "productos"));
+  
+  // Limpiar el contenedor antes de agregar contenido
+  contenedor.innerHTML = '';
+  
+  // Crear un objeto para agrupar productos por categoría
+  const productosPorCategoria = {};
+
+  // Organizar los productos por categoría
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    if (!productosPorCategoria[data.categoria]) {
+      productosPorCategoria[data.categoria] = [];
+    }
+    productosPorCategoria[data.categoria].push(data);
+  });
+
+  // Agregar las secciones por categoría al contenedor
+  for (let categoria in productosPorCategoria) {
+    // Crear una nueva sección para cada categoría
+    contenedor.innerHTML += `
+      <section class="seccion diseño centrado producto" id="productos-${categoria}">
+        <h2 class="seccion-titulo">${categoria.toUpperCase()}</h2>
+        <div class=" productos-grid" id="productosContainer-${categoria}">
+        </div>
+      </section>
+    `;
+
+    const productosContainer = document.getElementById(`productosContainer-${categoria}`);
+    
+    // Agregar los productos de esa categoría a su contenedor correspondiente
+    productosPorCategoria[categoria].forEach(producto => {
+      productosContainer.innerHTML += `
+        <div class="diseño__item">
+          <div class="diseño__img">
+            <img src="${producto.imagen}" alt="${producto.titulo}">
+          </div>
+          <h3>${producto.titulo}</h3>
+          <p >${producto.descripcion}</p>
+          <span> <div>$${producto.precio}</div></span>
+        </div>
+      `;
+    });
+  }
+}
+
+cargarProductos();
+
+
+
+  </script>
+
 </body>
+
 
 </html>

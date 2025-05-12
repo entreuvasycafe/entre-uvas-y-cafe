@@ -1,4 +1,26 @@
 /* ===== DISEÑO ===== */
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que pasen a la siguiente fila si no hay espacio */
+    gap: 20px; /* Espacio entre productos */
+    justify-content: center; /* Centra los productos horizontalmente */
+  }
+
+  .productos-grid span div{
+    background-color: #9573ad;
+  }
+  
+  .diseño__item {
+    width: 250px; /* O el ancho que prefieras para cada producto */
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+}
+
+
 .diseño__container {
     display: grid;
     row-gap: 2rem;
@@ -27,6 +49,14 @@
 
 .diseño__img img:hover {
     transform: scale(1.1);
+}
+
+.diseño__item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 25px rgba(14, 36, 49, 0.1);
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {

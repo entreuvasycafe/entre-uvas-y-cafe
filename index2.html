@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entre Uvas y Café</title>
+
+  <link rel="icon" href="assets/img/icono.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Tus estilos personalizados -->
+  <style>
+  
+  /* Asegura que las imágenes en el carrusel no se deformen y se ajusten bien en móviles */
+  #carouselExample img {
+    object-fit: cover; /* Ajuste de la imagen para evitar deformación */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 60vh; /* Asegura que las imágenes no sean demasiado altas en móviles */
+  }
+
+  /* Controlar la visibilidad de los textos en dispositivos móviles */
+  .carousel-caption h1, .carousel-caption p {
+    font-size: 1.2rem; /* Tamaño más pequeño en móviles */
+  }
+
+  @media (max-width: 767px) {
+    .carousel-caption {
+      bottom: 10px; /* Alinea el texto en la parte inferior en móviles */
+      text-align: center; /* Centra el texto */
+    }
+
+    .carousel-caption h1 {
+      font-size: 1.5rem; /* Ajuste de tamaño de fuente en móvil */
+    }
+
+    .carousel-caption p {
+      font-size: 1rem; /* Ajuste de tamaño de párrafo en móvil */
+    }
+  }
+
+  #carouselExample img {
+    max-height: 500px; /* O el alto que tú quieras */
+    object-fit: cover; /* Hace que la imagen se recorte sin deformarse */
+    width: 100%;
+  }
+
+    .icon-link {
+      color: white;
+      transition: color 0.3s ease;
+    }
+    .icon-link:hover {
+      color: #ffc107;
+
+    }
+  </style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/logo-navbar.png" alt="Logo" height="50" class="me-2">
+        <span class="fw-bold">Entre Uvas y Café</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#quees">¿QUIENES SOMOS?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">PRODUCTOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ubicacion">UBICACIÓN</a></li>
+          <li class="nav-item">
+            <a href="#contacto" class="btn btn-primary ms-2">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Slider -->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/slide1.1.jpeg" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>EL MEJOR CAFÉ PARA TU DÍA</h1>
+          <p>Empieza tu jornada con el aroma perfecto y el sabor inigualable de nuestro café de especialidad.</p>
+          <a href="#contacto" class="btn btn-primary">Contáctanos</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/slide2.2.jpeg" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>DULCES MOMENTOS</h1>
+          <p>Disfruta de nuestra pastelería artesanal, el complemento ideal para una experiencia única.</p>
+          <a href="#contacto" class="btn btn-primary">Contáctanos</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/galeria-1.png" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>UN ESPACIO PARA COMPARTIR</h1>
+          <p>Ven a nuestro acogedor rincón y vive momentos especiales con quienes más quieres.</p>
+          <a href="#contacto" class="btn btn-primary">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- ¿Qué es Entre Uvas y Café? -->
+  <section id="quees" class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-5">¿QUÉ ES ENTRE UVAS Y CAFÉ?</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="assets/img/cafe.avif" alt="Café" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <p>Entre Uvas y Café es un espacio acogedor donde el café y el té se combinan para brindar una experiencia de sabor y tranquilidad.</p>
+          <h4>Un concepto versátil</h4>
+          <p>La esencia de Entre Uvas y Café radica en su flexibilidad. Encuentra el rincón perfecto para desconectarte o disfrutar de una buena taza de café o té.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">SERVICIOS</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/cafe-icon.png" class="card-img-top p-4" alt="Cafetería">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cafetería</h5>
+              <p class="card-text">Selección de cafés y tés de alta calidad, preparados con dedicación para resaltar cada sabor y aroma.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/pasteleria-icon.png" class="card-img-top p-4" alt="Pastelería Artesanal">
+            <div class="card-body text-center">
+              <h5 class="card-title">Pastelería Artesanal</h5>
+              <p class="card-text">Postres y pastelería casera elaborados con ingredientes naturales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/ambiente-icon.png" class="card-img-top p-4" alt="Ambiente Acogedor">
+            <div class="card-body text-center">
+              <h5 class="card-title">Ambiente Acogedor</h5>
+              <p class="card-text">Espacio ideal para relajarte o compartir momentos especiales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-5">PRODUCTOS</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-4">
+          <img src="assets/img/galeria-1.png" class="img-fluid rounded">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="assets/img/galeria-2.png" class="img-fluid rounded">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="assets/img/galeria-3.png" class="img-fluid rounded">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="assets/img/galeria-4.png" class="img-fluid rounded">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="assets/img/galeria-5.png" class="img-fluid rounded">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="assets/img/galeria-6.png" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section id="ubicacion" class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-5">UBICACIÓN</h2>
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp -->
+  <div class="position-fixed bottom-0 end-0 m-4">
+    <a href="https://wa.me/56900000000" class="btn btn-success rounded-circle p-3" target="_blank">
+      <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+  </div>
+
+  <h1>Productos disponibles</h1>
+        <!-- Contenedor donde se mostrarán los productos -->
+        <section id="contenedor-productos"></section>
+
+
+  <!-- Footer -->
+<!-- Footer con hover -->
+<footer class="bg-dark text-light py-4 mt-5">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a href="#quees" class="text-light text-decoration-none me-3">¿Quiénes Somos?</a>
+        <a href="#servicios" class="text-light text-decoration-none me-3">Servicios</a>
+        <a href="#productos" class="text-light text-decoration-none me-3">Productos</a>
+        <a href="#ubicacion" class="text-light text-decoration-none">Ubicación</a>
+      </div>
+      <div class="mb-3">
+        <a href="https://www.facebook.com" target="_blank" class="icon-link me-3">
+          <i class="bi bi-facebook fs-4"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="icon-link me-3">
+          <i class="bi bi-instagram fs-4"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icon-link me-3">
+          <i class="bi bi-tiktok fs-4"></i>
+        </a>
+        <a href="https://wa.me/56912345678" target="_blank" class="icon-link">
+          <i class="bi bi-whatsapp fs-4"></i>
+        </a>
+      </div>
+      <p class="mb-0">&copy; 2025 Entre Uvas y Café. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Firebase SDK y Firestore: pega esto justo antes del cierre del body -->
+   <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBM2fFPK3Fb5UK-PbWIYdP-SpFZug0mt-0",
+  authDomain: "pruebaentreuvasycafe.firebaseapp.com",
+  projectId: "pruebaentreuvasycafe",
+  storageBucket: "pruebaentreuvasycafe.firebasestorage.app",
+  messagingSenderId: "971782771779",
+  appId: "1:971782771779:web:cd0eb94abdbe9cece3f0f6",
+  measurementId: "G-GFFYS8EW70"
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Cargar productos existentes
+const contenedor = document.getElementById("contenedor-productos");
+
+async function cargarProductos() {
+  const querySnapshot = await getDocs(collection(db, "productos"));
+  contenedor.innerHTML = ""; // Limpiar antes de volver a cargar
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    contenedor.innerHTML += `
+      <div class="producto">
+        <img src="${data.imagen}" alt="${data.titulo}">
+        <h3>${data.titulo}</h3>
+        <p>${data.descripcion}</p>
+        <span>$${data.precio}</span>
+      </div>
+    `;
+  });
+}
+
+cargarProductos();
+
+// Formulario para agregar productos
+const form = document.getElementById('form-producto');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const nuevoProducto = {
+    titulo: document.getElementById('titulo').value,
+    imagen: document.getElementById('imagen').value,
+    descripcion: document.getElementById('descripcion').value,
+    precio: parseInt(document.getElementById('precio').value),
+  };
+
+  try {
+    await addDoc(collection(db, "productos"), nuevoProducto);
+    alert("✅ Producto agregado correctamente");
+    form.reset();
+    cargarProductos(); // Recargar productos
+  } catch (error) {
+    console.error("❌ Error al agregar el producto: ", error);
+    alert("Hubo un error, revisa la consola.");
+  }
+  });
+
+  </script>
+</body>
+
+</html>

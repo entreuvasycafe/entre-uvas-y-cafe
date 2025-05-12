@@ -61,11 +61,12 @@
     height: 0.18rem;
     left: 0;
     top: 2rem;
-    background-color: var(--first-color);
+    background-color: #7e52a7;
 }
 
 .nav__logo {
     color: var(--second-color);
+  
 }
 
 .nav__toggle {
@@ -109,7 +110,7 @@
     }
 
     .nav {
-        height: calc(var(--header-height) + 1rem);
+        height: calc(var(--header-height) + 2rem);
     }
 
     .nav__list {
