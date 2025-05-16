@@ -11,8 +11,8 @@
   }
   
   .diseño__item {
-    width: 250px; /* O el ancho que prefieras para cada producto */
-    border: 1px solid #ddd;
+    width: 330px; /* O el ancho que prefieras para cada producto */
+    border: 1px solid #d2c6db;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -33,7 +33,7 @@
     box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
     border-radius: 0.2rem;
     overflow: hidden;
-    height: 320px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,6 +46,58 @@
     transition: 1s;
     cursor: pointer;
 }
+
+.categoria-titulo {
+    position: relative;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+    color: #333;
+    background-color: transparent;
+    padding-bottom: 0.5rem;
+  }
+  
+  .categoria-titulo::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #9573ad; /* o el color que combine con tu diseño */
+    border-radius: 2px;
+  }
+
+  .botones-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-categoria {
+    padding: 0.5rem 1rem;
+    background-color: #9573ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-categoria:hover {
+    background-color: #7a5e96;
+  }
+
+  .btn-categoria.activo {
+    background-color: #553155;
+    color: #fff;
+    font-weight: bold;
+  }
 
 .diseño__img img:hover {
     transform: scale(1.1);

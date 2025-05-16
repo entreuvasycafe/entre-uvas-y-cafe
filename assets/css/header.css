@@ -3,7 +3,7 @@
     max-width: 1024px;
     display: grid;
     grid-template-columns: 100%;
-    grid-column-gap: 2rem;
+    grid-column-gap: 4rem;
     width: calc(100% - 2rem);
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
@@ -58,7 +58,7 @@
     position: absolute;
     content: "";
     width: 100%;
-    height: 0.18rem;
+    height: 2px; /* ← Línea más delgada */
     left: 0;
     top: 2rem;
     background-color: #7e52a7;

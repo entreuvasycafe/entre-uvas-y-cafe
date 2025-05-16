@@ -12,8 +12,8 @@
 
 /*===== VARIABLES CSS =====*/
 :root {
-    --header-height: 3rem;
-    --font-semi: 600;
+    --header-height: 3.3rem;
+    --font-semi: 500;
 }
 
 html,
@@ -47,7 +47,7 @@ body {
     --mb-1: 0.5rem;
     --mb-2: 1rem;
     --mb-3: 1.5rem;
-    --mb-4: 2rem;
+    --mb-4: 1.8rem;
     --mb-5: 2.5rem;
     --mb-6: 3rem;
 }
@@ -108,6 +108,7 @@ img {
 /*===== CLASS CSS ===== */
 .seccion-titulo {
     position: relative;
+    display: inline-block;
     font-size: 25px;
     color: var(--second-color);
     margin-top: var(--mb-2);
@@ -116,24 +117,25 @@ img {
 }
 
 .seccion-titulo::after {
-    position: absolute;
     content: "";
-    width: 64px;
-    height: 0.18rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 2rem;
+    position: absolute;
+    width: 80px; /* ancho fijo más corto que el texto */
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.5rem;
     background-color: var(--first-color);
+    border-radius: 5px;
 }
 
-.centrado {
+.centrado { 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem 0;
+    gap: 1.5rem; /* Espaciado vertical entre elementos */
 }
 
 /* Estilos generales para evitar desbordamiento horizontal */
@@ -142,6 +144,57 @@ body {
     padding: 0;
     overflow-x: hidden;
     /* Evita el desbordamiento horizontal */
+}
+
+
+.opiniones__container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.opinion__card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.opinion__card:hover {
+    transform: translateY(-5px);
+}
+
+.opinion__img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    border: 3px solid #a997b2;
+    display: block;
+}
+
+.opinion__nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.opinion__texto {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.8rem 0;
+}
+
+.opinion__estrellas {
+    font-size: 1.2rem;
+    color: #f5c518;
 }
 
 /* Media queries para dispositivos móviles */
