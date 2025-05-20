@@ -194,7 +194,13 @@ body {
 
 .opinion__estrellas {
     font-size: 1.2rem;
+    
     color: #f5c518;
+}
+
+.estrella {
+    color: #5a4864; /* mismo color del footer */
+    font-size: 1.5rem;
 }
 
 /* Media queries para dispositivos móviles */
