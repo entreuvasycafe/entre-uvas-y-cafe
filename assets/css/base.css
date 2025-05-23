@@ -32,7 +32,7 @@ body {
 /*===== Colores =====*/
 :root {
     --first-color: #7e52a7;
-    --second-color: #2d3436;
+    --second-color: #200d26;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -160,10 +160,10 @@ body {
     background-color: #fff;
     border-radius: 1rem;
     padding: 1.5rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(63, 10, 76, 0.1);
     max-width: 300px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 
 .opinion__card:hover {

@@ -1,66 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre Uvas y Café</title>
+
     <link rel="icon" href="assets/img/icono.png">
     <link rel="stylesheet" href="assets/css/whatsapp.css">
     <link rel="stylesheet" href="assets/css/carrusel.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/quees.css">
-    <link rel="stylesheet" href="assets/css/galeria.css">
+    <link rel="stylesheet" href="assets/css/product.css">
     <link rel="stylesheet" href="assets/css/contacto.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/ubicacion.css">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
-
-    <title>Entre Uvas y Café</title>
+   
 </head>
 
 <body>
-    <!--===== INICIO WHATSAPP FLOTANTE =====-->
-    <div class="nav-bottom">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <div class="popup-whatsapp fadeIn">
-            <div class="content-whatsapp -top">
-                <button type="button" class="closePopup">
-                    <i class="material-icons icon-font-color">close</i>
-                </button>
 
-                <p>
-                    <img src="assets/img/secretary.png" width="50" /> ¡Hola!, Bienvenido/a a Entre Uvas y Café, ¿En qué
-                    podemos
-                    ayudarte?
-                </p>
-            </div>
-            <div class="content-whatsapp -bottom">
-                <input class="whats-input" id="whats-in" type="text" placeholder="Enviar mensaje..." />
-
-                <button class="send-msPopup" id="send-btn" type="button">
-                    <i class="material-icons icon-font-color--black">send</i>
-                </button>
-            </div>
+  <!--===== WHATSAPP FLOTANTE =====-->
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <div class="popup-whatsapp fadeIn">
+        <div class="content-whatsapp -top">
+            <button type="button" class="closePopup">
+                <i class="material-icons icon-font-color">close</i>
+            </button>
+            <p>
+                <img src="assets/img/secretary.png" width="50" /> ¡Hola!, Bienvenido/a a Entre Uvas y Café, ¿En qué podemos ayudarte?
+            </p>
         </div>
-        <button type="button" id="whats-openPopup" class="whatsapp-button">
-            <div class="float">
-                <i class="fa fa-whatsapp my-float"></i>
-            </div>
-        </button>
-        <div class="circle-anime"></div>
+        <div class="content-whatsapp -bottom">
+            <input class="whats-input" id="whats-in" type="text" placeholder="Enviar mensaje..." />
+            <button class="send-msPopup" id="send-btn" type="button">
+                <i class="material-icons icon-font-color--black">send</i>
+            </button>
+        </div>
     </div>
+    <button type="button" id="whats-openPopup" class="whatsapp-button">
+        <div class="float">
+            <i class="fa fa-whatsapp my-float"></i>
+        </div>
+    </button>
+    <div class="circle-anime"></div>
+</div>
     <!--===== FIN WHATSAPP FLOTANTE =====-->
 
     <!--===== INICIO HEADER =====-->
     <header class="header">
         <nav class="nav bd-grid">
-            <div class="footer__logo">
+            <div class="nav__logo">
                 <a href="#">
-                    <img src="assets/img/logo-footer.png" alt="Logo Entre Uvas y Café">
+                    <img src="assets/img/icono.png" alt="Logo Entre Uvas y Café">
                 </a>
-              
             </div>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -69,18 +66,19 @@
                     <li class="nav__item"><a href="#productos" class="nav__link">PRODUCTOS</a></li>
                     <li class="nav__item"><a href="#opiniones" class="nav__link">OPINIONES</a></li>
                     <li class="nav__item"><a href="#ubicacion" class="nav__link">UBICACIÓN</a></li>
-                    <li class="nav__item"><button class="boton cuatro"><span><a href="#contacto" class="nav__link">
-                                    <font color="#fff">Contacto</font>
-                                </a></span></button></li>
+                    <li class="nav__item">
+                        <button class="boton cuatro">
+                            <span><a href="#contacto" class="nav__link"><font color="#fff">Contacto</font></a></span>
+                        </button>
+                    </li>
                 </ul>
             </div>
-
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
         </nav>
     </header>
-    <!--===== FIN HEADER =====-->
+    <!--===== FIN HEADER ordenado hasta aqui =====-->
     <main class="l-main">
         
 
@@ -188,7 +186,7 @@
                             pastelería casera, elaborados con ingredientes naturales.</p>
                     </div>
                     <div class="card">
-                        <img class="beneficios__img" src="assets/img/slide2.2.jpeg">
+                        <img class="beneficios__img" src="assets/img/slide1.1.jpeg">
                         <h3 class="beneficios__subtitulo">Ambiente Acogedor</h3>
                         <p class="beneficios__texto">Un espacio pensado para la comodidad y el disfrute, ideal
                             para
@@ -355,144 +353,13 @@
     <script defer src="assets/javascript/carrusel.js"></script>
     <script defer src="assets/javascript/header.js"></script>
     <script defer src="assets/javascript/quees.js"></script>
-    <script defer src="assets/javascript/galeria.js"></script>
     <script defer src="assets/javascript/contacto.js"></script>
     <script defer src="assets/javascript/footer.js"></script>
     <script defer src="assets/javascript/main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
-   <!-- Firebase SDK y Firestore: pega esto justo antes del cierre del body -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-    import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
-
-// Configuración de Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBM2fFPK3Fb5UK-PbWIYdP-SpFZug0mt-0",
-  authDomain: "pruebaentreuvasycafe.firebaseapp.com",
-  projectId: "pruebaentreuvasycafe",
-  storageBucket: "pruebaentreuvasycafe.firebasestorage.app",
-  messagingSenderId: "971782771779",
-  appId: "1:971782771779:web:cd0eb94abdbe9cece3f0f6",
-  measurementId: "G-GFFYS8EW70"
-};
-
-// Inicializar Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-
-const contenedor = document.getElementById("contenedor-productos");
-const contenedorBotones = document.getElementById("botones-categorias");
-
-let productosPorCategoria = {};
-
-async function cargarProductos() {
-  const querySnapshot = await getDocs(collection(db, "productos"));
-  productosPorCategoria = {};
-
-  querySnapshot.forEach((doc) => {
-    const data = doc.data();
-    if (!productosPorCategoria[data.categoria]) {
-      productosPorCategoria[data.categoria] = [];
-    }
-    productosPorCategoria[data.categoria].push(data);
-  });
-
-  crearBotonesCategorias(); // crea los botones
-  mostrarProductos(); // muestra todos al inicio
-}
-
-function crearBotonesCategorias() {
-  contenedorBotones.innerHTML = "";
-
-  const botonTodos = document.createElement("button");
-  botonTodos.textContent = "Todos";
-  botonTodos.classList.add("btn-categoria", "activo"); // activo por defecto
-  botonTodos.onclick = () => {
-    mostrarProductos();
-    marcarBotonActivo(botonTodos);
-  };
-  contenedorBotones.appendChild(botonTodos);
-
-  for (let categoria in productosPorCategoria) {
-    const boton = document.createElement("button");
-    boton.textContent = categoria.toUpperCase();
-    boton.classList.add("btn-categoria");
-    boton.onclick = () => {
-      mostrarProductos(categoria);
-      marcarBotonActivo(boton);
-    };
-    contenedorBotones.appendChild(boton);
-  }
-}
-
-function marcarBotonActivo(botonSeleccionado) {
-  const botones = contenedorBotones.querySelectorAll("button");
-  botones.forEach((btn) => btn.classList.remove("activo"));
-  botonSeleccionado.classList.add("activo");
-}
-
-function mostrarProductos(filtrarCategoria = null) {
-  contenedor.innerHTML = "";
-
-  const categorias = filtrarCategoria ? [filtrarCategoria] : Object.keys(productosPorCategoria);
-
-  categorias.forEach((categoria) => {
-    const categoriaContenedor = document.createElement("div");
-    categoriaContenedor.classList.add("categoria-contenedor");
-
-    if (!filtrarCategoria) {
-      const tituloCategoria = document.createElement("h2");
-      tituloCategoria.classList.add("categoria-titulo");
-      tituloCategoria.textContent = categoria.toUpperCase();
-      categoriaContenedor.appendChild(tituloCategoria);
-    }
-
-    const productosGrid = document.createElement("div");
-    productosGrid.classList.add("productos-grid");
-
-    productosPorCategoria[categoria].forEach((producto) => {
-      const item = document.createElement("div");
-      item.classList.add("diseño__item");
-
-      const imgDiv = document.createElement("div");
-      imgDiv.classList.add("diseño__img");
-
-      const img = document.createElement("img");
-      img.src = producto.imagen;
-      img.alt = producto.titulo;
-      imgDiv.appendChild(img);
-
-      const titulo = document.createElement("h3");
-      titulo.textContent = producto.titulo;
-
-      const descripcion = document.createElement("p");
-      descripcion.textContent = producto.descripcion;
-
-      const precio = document.createElement("span");
-      precio.innerHTML = `<div>$${producto.precio}</div>`;
-
-      item.appendChild(imgDiv);
-      item.appendChild(titulo);
-      item.appendChild(descripcion);
-      item.appendChild(precio);
-
-      productosGrid.appendChild(item);
-    });
-
-    categoriaContenedor.appendChild(productosGrid);
-    contenedor.appendChild(categoriaContenedor);
-  });
-}
-
-cargarProductos();
-
-
-
-
-
-  </script>
+  
+  <script type="module" src="assets/javascript/productos.js"></script>
 
 </body>
 

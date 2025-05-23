@@ -1,4 +1,7 @@
 /*===== LAYOUT =====*/
+:root {
+    --logo-height: 130px;
+  }
 .bd-grid {
     max-width: 1024px;
     display: grid;
@@ -202,8 +205,7 @@
 }
 
 .nav__logo img {
-    height: 50px;
-    /* Ajusta el tamaño del logo según sea necesario */
+    height: var(--logo-height);
     margin-right: 10px;
 }
 
