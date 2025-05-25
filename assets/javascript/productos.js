@@ -43,7 +43,7 @@ function crearBotonesCategorias() {
   contenedorBotones.innerHTML = "";
 
   const botonTodos = document.createElement("button");
-  botonTodos.textContent = "Todos";
+  botonTodos.textContent = "TODOS";
   botonTodos.classList.add("btn-categoria", "activo"); // activo por defecto
   botonTodos.onclick = () => {
     mostrarProductos();

@@ -15,19 +15,21 @@
     background-position: center;
     z-index: 1;
     display: none;
-    padding: 0 15px;
     animation: slide 2s ease;
 }
 
 .home .slide.active {
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    padding-bottom: 5px; /* ajusta esta distancia según lo que necesites */
 }
 
 @keyframes slide {
     0% {
         transform: scale(1.1);
     }
-
     100% {
         transform: scale(1);
     }
@@ -40,14 +42,22 @@
 
 .home .container {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home .caption {
-    width: 50%;
+    background-color: rgba(77, 39, 113, 0.7); /* Caja transparente con color */
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    color: #eee;
 }
 
 .home .caption h1 {
-    font-size: 42px;
+    font-size: 22px;
     color: #eee;
     margin: 0;
 }
@@ -90,7 +100,6 @@
         opacity: 0;
         transform: translateX(-100px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0px);
@@ -152,13 +161,57 @@
     background-color: #a997b2;
 }
 
-@media screen and (max-width: 600px) {
-    .contenido-slider {
-        flex-direction: column-reverse;
+@media screen and (max-width: 768px) {
+    .home {
+        height: 565px;
+        padding: 0; /* elimina padding vertical si no lo necesitas */
+        position: relative;
+        overflow: hidden;
     }
 
-    .contenido-slider>div {
-        width: 80%;
+    .home .slide {
+        display: none;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .home .slide.active {
+        display: flex;
+        align-items: flex-end; /* o center según diseño */
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .home .caption {
+        padding: 20px;
+        width: 90%;
+        max-width: 100%;
+        color: white;
+        z-index: 2;
+    }
+
+    .caption h1 {
+        font-size: 20px;
+    }
+
+    .caption p {
+        font-size: 14px;
+    }
+
+    .caption a {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .controls .prev,
+    .controls .next {
+        display: none;
     }
 }
 

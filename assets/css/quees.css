@@ -13,47 +13,61 @@
     overflow: hidden;
     padding: 20px 0;
     display: flex;
+    justify-content: center; /* Centra las cards */
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Todas en una sola línea */
     margin-bottom: -100px;
     margin-top: -30px;
+
 }
 
 .container_cards .card {
-    width: 330px;
-    height: 400px;
+    flex: 1 1 200px; /* Permite que cada card se adapte al espacio disponible */
+    max-width: 240px; /* Limita el ancho máximo */
+    height: 300px; /* Ajusta la altura */
     border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(76, 19, 122, 0.189);
     overflow: hidden;
-    margin: 5px;
     text-align: center;
     transition: all 0.25s;
-    min-width: 200px;
-    flex: 250px;
+    margin: 5px;
+    
 }
 
 .container_cards .card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+    box-shadow: 0 8px 16px rgba(76, 19, 122, 0.3); /* Sombra más grande */
 }
 
 .container_cards .card img {
-    width: 90%;
-    height: 220px;
+    width: 100%;
+    height: 150px;
     object-fit: cover;
     margin: 0 auto;
-    margin-top: 10px;
-    border-radius: 8px 8px 0 0; /* Opcional: bordes redondeados arriba */
+    border-radius: 8px 8px 0 0;
 }
-
 
 .container_cards .card h3 {
     font-weight: 600;
+    font-size: 16px; /* Reduce tamaño del título */
 }
 
 .container_cards .card p {
-    padding: 0 1rem;
-    font-size: 16px;
+    padding: 0 0.5rem;
+    font-size: 14px; /* Reduce tamaño del texto */
+}
+
+@media (max-width: 768px) {
+    .container_cards {
+        flex-wrap: wrap; /* Ahora las cards se alinean en columna */
+        justify-content: center; /* Centra las cards en la pantalla */
+    }
+
+    .container_cards .card {
+        flex: 1 1 100%; /* Ocupa el ancho disponible */
+        max-width: 90%; /* Máximo 90% del ancho de la pantalla */
+        margin: 10px 0; /* Ajusta el margen para mejor espaciado */
+    }
 }
 
 .beneficios__img {
