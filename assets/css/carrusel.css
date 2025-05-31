@@ -163,7 +163,7 @@
 
 @media screen and (max-width: 768px) {
     .home {
-        height: 755px;
+        height: 100vh; /* Ocupa toda la pantalla */
         padding: 0; /* elimina padding vertical si no lo necesitas */
         position: relative;
         overflow: hidden;
@@ -191,7 +191,7 @@
     .home .caption {
         padding: 60px;
         width: 90%;
-        height: 400px;
+        height: 60vh; /* Ocupa toda la pantalla */
         max-width: 100%;
         color: white;
         z-index: 2;
