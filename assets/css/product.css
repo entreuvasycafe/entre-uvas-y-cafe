@@ -17,7 +17,7 @@
   margin-bottom: 1rem;
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.1);
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: #f5f0fa !important;
   align-items: center;
   gap: 1rem;
   transition: transform 0.3s ease;
@@ -83,6 +83,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       padding: 0.5rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
   }
 
   .diseño__img {

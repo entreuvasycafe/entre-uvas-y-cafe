@@ -157,7 +157,7 @@ body {
 }
 
 .opinion__card {
-    background-color: #fff;
+    background-color: #f5f0fa !important;
     border-radius: 1rem;
     padding: 1.5rem;
     box-shadow: 0 0 15px rgba(63, 10, 76, 0.1);

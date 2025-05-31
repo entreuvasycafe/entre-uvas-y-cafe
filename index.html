@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entre Uvas y Café</title>
-
+   
     <link rel="icon" href="assets/img/icono.png">
     <link rel="stylesheet" href="assets/css/whatsapp.css">
     <link rel="stylesheet" href="assets/css/carrusel.css">
@@ -16,8 +15,10 @@
     <link rel="stylesheet" href="assets/css/contacto.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/ubicacion.css">
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+    <title>Entre Uvas y Café</title>
    
 </head>
 
@@ -31,12 +32,16 @@
             <button type="button" class="closePopup">
                 <i class="material-icons icon-font-color">close</i>
             </button>
+
             <p>
-                <img src="assets/img/secretary.png" width="50" /> ¡Hola!, Bienvenido/a a Entre Uvas y Café, ¿En qué podemos ayudarte?
+                <img src="assets/img/secretary.png" width="50" /> ¡Hola!, Bienvenido/a a Entre Uvas y Café, ¿En qué
+                podemos
+                ayudarte?
             </p>
         </div>
         <div class="content-whatsapp -bottom">
             <input class="whats-input" id="whats-in" type="text" placeholder="Enviar mensaje..." />
+
             <button class="send-msPopup" id="send-btn" type="button">
                 <i class="material-icons icon-font-color--black">send</i>
             </button>
@@ -133,34 +138,37 @@
         <!--===== FIN HOGAR =====-->
 
         <!--===== INICIO QUE ES =====-->
-        <section class="seccion quienes" id="quienes">
+        <section class="seccion quienes" id="quienes"> 
+            <div class="quienes__contenido">
+                <h2 class="seccion-titulo quienes__titulo">¿QUIÉNES SOMOS?</h2>
+                <p class="quienes__historia">
+                    “Entre Uvas y Café” nació del sueño de dos amigos por crear un espacio acogedor, donde el buen café y las buenas conversaciones fueran el centro. Nuestra historia es una mezcla de pasión, amistad y muchas tazas de inspiración.
+                </p>
+            </div>
             <div class="quienes__container">
-                <!-- Imagen a la izquierda -->
-                <div class="quienes__foto">
-                    <img src="assets/img/slide2.2.jpeg" alt="Imagen quienes somos">
+                <!-- Columna izquierda (imagen + texto) -->
+                <div class="quienes__info">
+                    
+                    <div class="quienes__foto">
+                        <img src="assets/img/WhatsApp Image 2025-04-21 at 9.17.50 AM.JPG" alt="Imagen quienes somos">
+                    </div>
+                    
                 </div>
         
-                <!-- Contenido a la derecha -->
-                <div class="quienes__contenido">
-                    <h2 class="quienes__titulo">¿QUIÉNES SOMOS?</h2>
-                    <p class="quienes__historia">
-                        “Entre Uvas y Café” nació del sueño de dos amigos por crear un espacio acogedor, donde el buen café y las buenas conversaciones fueran el centro. Nuestra historia es una mezcla de pasión, amistad y muchas tazas de inspiración.
-                    </p>
+                <!-- Columna derecha (equipo) -->
+                <div class="quienes__equipo">
+                    <div class="quienes__card">
+                        <img src="https://secrecyjewels.es/blog/wp-content/uploads/2022/10/esencia-de-una-persona.jpg" alt="Dueño 1" class="quienes__img">
+                        <h3 class="quienes__nombre">Isabel Torres</h3>
+                        <p class="quienes__rol">Fundadora & Barista</p>
+                        <p class="quienes__desc">Apasionada por el café artesanal, Isabel ha recorrido Latinoamérica en búsqueda de granos únicos.</p>
+                    </div>
         
-                    <div class="quienes__equipo">
-                        <div class="quienes__card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTumr-ynIsoOEzb29PmGsYo5Dfem9Yio8dC8Q&s" alt="Dueño 1" class="quienes__img">
-                            <h3 class="quienes__nombre">Isabel Torres</h3>
-                            <p class="quienes__rol">Fundadora & Barista</p>
-                            <p class="quienes__desc">Apasionada por el café artesanal, Isabel ha recorrido Latinoamérica en búsqueda de granos únicos.</p>
-                        </div>
-        
-                        <div class="quienes__card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuNmhtT0h7uid93-1ZqD3I0MQp5vkdPPRR5A&s" alt="Dueño 2" class="quienes__img">
-                            <h3 class="quienes__nombre">Carlos Rivas</h3>
-                            <p class="quienes__rol">Cofundador & Sommelier de Té</p>
-                            <p class="quienes__desc">Carlos aporta su experiencia en tés del mundo, fusionando tradición y modernidad en cada infusión.</p>
-                        </div>
+                    <div class="quienes__card">
+                        <img src="https://www.exitopersonal.com/imagenes/9-rasgos-comunes-en-las-personas-exitosas_x2.jpg" alt="Dueño 2" class="quienes__img">
+                        <h3 class="quienes__nombre">Carlos Rivas</h3>
+                        <p class="quienes__rol">Cofundador & Sommelier de Té</p>
+                        <p class="quienes__desc">Carlos aporta su experiencia en tés del mundo, fusionando tradición y modernidad en cada infusión.</p>
                     </div>
                 </div>
             </div>

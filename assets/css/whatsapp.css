@@ -234,4 +234,14 @@ input.whats-input[type="text"]:focus {
     color: #333333;
 }
 
+@media (max-width: 768px) {
+    .float, .circle-anime, .whatsapp-button {
+      bottom: 15px !important;
+      right: 15px !important;
+    }
+    .popup-whatsapp {
+        right: 10px !important;
+        bottom: 80px !important;
+  }
+}
 /*===== FIN BOTON WSP =====*/

@@ -8,10 +8,7 @@ const sr = ScrollReveal({
 
 /*SCROLL CONTACTO*/
 sr.reveal('.seccion-titulo', {});
-sr.reveal('.container__contacto', { delay: 400 });
-sr.reveal('.contact__form', { interval: 200 });
-sr.reveal('.contact__input', { interval: 200 });
-sr.reveal('.contact__button', { delay: 600 });
+
 
 document.getElementById('enviar').addEventListener('click', function () {
     var nombre = document.getElementById('nombre').value;

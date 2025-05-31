@@ -60,11 +60,12 @@
 .nav__link:hover::after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 50%;
     height: 2px; /* ← Línea más delgada */
-    left: 0;
+    left: 50%;
     top: 2rem;
     background-color: #7e52a7;
+    transform: translateX(-50%);
 }
 
 .nav__logo {

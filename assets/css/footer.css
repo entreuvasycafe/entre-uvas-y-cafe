@@ -37,6 +37,9 @@
     font-size: 1.2rem;
 }
 
+.footer__logo-img{
+    margin-right: 0.5rem;
+}
 
 @media (min-width: 768px) {
     .footer__container {
@@ -52,8 +55,9 @@
 }
 
 .footer__logo-img {
-    height: 80px;
+    height: 100px;
     margin-bottom: 0.5rem;
+    margin-left: 4.5rem;
 }
 
 .footer__title {
