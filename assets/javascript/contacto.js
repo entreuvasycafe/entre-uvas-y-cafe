@@ -1,8 +1,4 @@
 
-
-
-
-
 document.getElementById('enviar').addEventListener('click', function () {
     var nombre = document.getElementById('nombre').value;
     var mensaje = document.getElementById('mensaje').value;
