@@ -6,6 +6,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.nav__toggle,
+.nav__toggle * {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .seccion {
     width: 100%;
 }
@@ -98,6 +103,11 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .seccion {
