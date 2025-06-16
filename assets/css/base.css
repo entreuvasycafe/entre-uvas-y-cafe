@@ -181,8 +181,8 @@ body {
 }
 
 .opinion__img {
-    width: 130px;
-    height: 130px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto 1rem auto;
