@@ -317,9 +317,14 @@
     <div class="container__contacto bd-grid">
        <!-- FORMULARIO DE CONTACTO -->
 <form id="formulario-contacto" class="contact__form">
-  <!-- Honeypot oculto para evitar spam bots -->
-  <input type="text" name="honeypot" style="display: none;">        
+  <!-- Honeypot oficial para evitar bots -->
+  <input type="text" name="_honey" style="display: none;">        
 
+  <!-- Formsubmit config -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <!-- Campos del usuario -->
   <input type="text" name="nombre" placeholder="Nombre" class="contact__input" required>
   <input type="email" name="email" placeholder="Correo electrónico" class="contact__input" required>
   <input type="text" name="asunto" placeholder="Asunto" class="contact__input" required>
@@ -327,6 +332,7 @@
 
   <button type="submit" class="contact__button button" style="background-color: #3e1663;">Enviar</button>
 </form>
+
         
     </div>
 </section>

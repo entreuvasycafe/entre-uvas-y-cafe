@@ -4,7 +4,7 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
     const form = e.target;
 
     // Verificar honeypot (spam)
-    if (form.honeypot.value !== "") {
+    if (form._honey.value !== "") {
       console.warn("Bot detectado");
       return;
     }
