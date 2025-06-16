@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <title>Entre Uvas y Café</title>
+     <!-- Favicon -->
     <link rel="icon" href="assets/img/icono.png">
-    <link rel="stylesheet" href="assets/css/whatsapp.css">
-    <link rel="stylesheet" href="assets/css/carrusel.css">
+    <!-- Librerías externas de íconos (cargar antes de tus estilos por si los usas en tu CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+    <!-- CSS Base y generales -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <!-- CSS de componentes o secciones -->
+    <link rel="stylesheet" href="assets/css/whatsapp.css">
+    <link rel="stylesheet" href="assets/css/carrusel.css">
     <link rel="stylesheet" href="assets/css/quees.css">
     <link rel="stylesheet" href="assets/css/product.css">
     <link rel="stylesheet" href="assets/css/contacto.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/ubicacion.css">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
-    <title>Entre Uvas y Café</title>
-   
+    <link rel="stylesheet" href="assets/css/ubicacion.css">     
 </head>
-
-<body>
-
+<body>  
   <!--===== WHATSAPP FLOTANTE =====-->
   <div class="nav-bottom">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -159,7 +159,7 @@
                 <div class="quienes__equipo">
                     <div class="quienes__card">
                         
-                        <h3 class="quienes__nombre">Isabel Torres</h3>
+                        <h3 class="quienes__nombre">Daniela Araya</h3>
                         <p class="quienes__rol">Fundadora & Barista</p>
                         <p class="quienes__desc">Apasionada por el café artesanal, Isabel ha recorrido Latinoamérica en búsqueda de granos únicos.</p>
                     </div>
@@ -318,20 +318,28 @@
        <!-- FORMULARIO DE CONTACTO -->
 <form id="formulario-contacto" class="contact__form">
   <!-- Honeypot oficial para evitar bots -->
-  <input type="text" name="_honey" style="display: none;">        
+  <input type="text" name="_honey" style="display: none;">
 
   <!-- Formsubmit config -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
 
-  <!-- Campos del usuario -->
-  <input type="text" name="nombre" placeholder="Nombre" class="contact__input" required>
-  <input type="email" name="email" placeholder="Correo electrónico" class="contact__input" required>
-  <input type="text" name="asunto" placeholder="Asunto" class="contact__input" required>
-  <textarea name="mensaje" rows="10" class="contact__input" placeholder="Mensaje" required></textarea>
+  <!-- Campos del usuario con etiquetas -->
+  <label for="nombre">Nombre</label>
+  <input type="text" id="nombre" name="nombre"  class="contact__input" required>
+
+  <label for="email">Correo electrónico</label>
+  <input type="email" id="email" name="email"  class="contact__input" required>
+
+  <label for="asunto">Asunto</label>
+  <input type="text" id="asunto" name="asunto"  class="contact__input" required>
+
+  <label for="mensaje">Mensaje</label>
+  <textarea id="mensaje" name="mensaje" rows="10" class="contact__input"  required></textarea>
 
   <button type="submit" class="contact__button button" style="background-color: #3e1663;">Enviar</button>
 </form>
+
 
         
     </div>
@@ -383,20 +391,19 @@
 </footer>
 <!--===== FIN FOOTER =====-->
     </main> <!-- Cierre de la etiqueta main -->
-
-    
+    <!-- Librerías externas primero (por si tus scripts dependen de ellas) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- Scripts principales y de estructura general -->
+    <script defer src="assets/javascript/main.js"></script>
+    <script defer src="assets/javascript/header.js"></script>
+    <script defer src="assets/javascript/footer.js"></script>
+    <!-- Scripts por sección o funcionalidad -->
     <script defer src="assets/javascript/whatsapp.js"></script>
     <script defer src="assets/javascript/carrusel.js"></script>
-    <script defer src="assets/javascript/header.js"></script>
     <script defer src="assets/javascript/quees.js"></script>
     <script defer src="assets/javascript/contacto.js"></script>
-    <script defer src="assets/javascript/footer.js"></script>
-    <script defer src="assets/javascript/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- Scripts especiales o con módulos ES6 -->
     <script type="module" src="assets/javascript/productos.js"></script>
 </body>
-
-
 </html>
