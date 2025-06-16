@@ -1,15 +1,51 @@
+document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-document.getElementById('enviar').addEventListener('click', function () {
-    var nombre = document.getElementById('nombre').value;
-    var mensaje = document.getElementById('mensaje').value;
+    const form = e.target;
 
-    console.log('Nombre:', nombre);
-    console.log('Mensaje:', mensaje);
+    // Verificar honeypot (spam)
+    if (form.honeypot.value !== "") {
+      console.warn("Bot detectado");
+      return;
+    }
 
-    var texto = `¡Hola!, me llamo ${nombre}, quería consultar ${mensaje}`;
-    var url = `https://wa.me/56984230531?text=${texto}`;
+    const formData = new FormData(form);
 
-    console.log('URL:', url);
+    // Mostrar loader
+    Swal.fire({
+      title: 'Enviando mensaje...',
+      text: 'Por favor espera.',
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
 
-    window.open(url, '_blank');
-});
+    fetch("https://formsubmit.co/TU_CORREO@ejemplo.com", { // <-- CAMBIA ESTO
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: '¡Mensaje enviado!',
+          text: 'Gracias por contactarnos. Te responderemos pronto.',
+          confirmButtonColor: '#3e1663'
+        });
+        form.reset();
+      } else {
+        throw new Error("Error en el envío");
+      }
+    }).catch(error => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No se pudo enviar el mensaje. Inténtalo más tarde.',
+        confirmButtonColor: '#d33'
+      });
+    });
+  });

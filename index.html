@@ -311,18 +311,26 @@
        
 
         <!--===== INICIO CONTACTO =====-->
-        <section class="seccion contacto centrado" id="contacto">
-            <h2 class="seccion-titulo">CONTACTO</h2>
+        <section class="seccion contacto centrado" id="contacto"> 
+    <h2 class="seccion-titulo">CONTACTO</h2>
 
-            <div class="container__contacto bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" id="nombre" placeholder="Nombre" class="contact__input">
-                    <textarea id="mensaje" cols="0" rows="10" class="contact__input" placeholder="Mensaje"></textarea>
-                    <button type="button" id="enviar" style="background-color: #3e1663;"
-                        class="contact__button button">Enviar</button>
-                </form>
-            </div>
-        </section>
+    <div class="container__contacto bd-grid">
+       <!-- FORMULARIO DE CONTACTO -->
+<form id="formulario-contacto" class="contact__form">
+  <!-- Honeypot oculto para evitar spam bots -->
+  <input type="text" name="honeypot" style="display: none;">        
+
+  <input type="text" name="nombre" placeholder="Nombre" class="contact__input" required>
+  <input type="email" name="email" placeholder="Correo electrónico" class="contact__input" required>
+  <input type="text" name="asunto" placeholder="Asunto" class="contact__input" required>
+  <textarea name="mensaje" rows="10" class="contact__input" placeholder="Mensaje" required></textarea>
+
+  <button type="submit" class="contact__button button" style="background-color: #3e1663;">Enviar</button>
+</form>
+        
+    </div>
+</section>
+
 
 
         <script defer src="assets/javascript/contacto.js"></script>
@@ -370,6 +378,7 @@
 <!--===== FIN FOOTER =====-->
     </main> <!-- Cierre de la etiqueta main -->
 
+    
     <script defer src="assets/javascript/whatsapp.js"></script>
     <script defer src="assets/javascript/carrusel.js"></script>
     <script defer src="assets/javascript/header.js"></script>
@@ -377,11 +386,10 @@
     <script defer src="assets/javascript/contacto.js"></script>
     <script defer src="assets/javascript/footer.js"></script>
     <script defer src="assets/javascript/main.js"></script>
-   
-
-  
-  <script type="module" src="assets/javascript/productos.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="module" src="assets/javascript/productos.js"></script>
 </body>
 
 
