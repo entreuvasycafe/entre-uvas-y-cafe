@@ -17,11 +17,19 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-
 const contenedor = document.getElementById("contenedor-productos");
 const contenedorBotones = document.getElementById("botones-categorias");
 
 let productosPorCategoria = {};
+const ordenCategorias = [
+  "Tortas",
+  "Postres",
+  "Tartaletas",
+  "Quiches",
+  "Empanadas",
+  "Té en hoja",
+  "Café especialidad"
+];
 
 async function cargarProductos() {
   const querySnapshot = await getDocs(collection(db, "productos"));
@@ -51,16 +59,18 @@ function crearBotonesCategorias() {
   };
   contenedorBotones.appendChild(botonTodos);
 
-  for (let categoria in productosPorCategoria) {
+  ordenCategorias.forEach((catNombre) => {
+  if (productosPorCategoria[catNombre]) {
     const boton = document.createElement("button");
-    boton.textContent = categoria.toUpperCase();
+    boton.textContent = catNombre.toUpperCase(); // solo para mostrar
     boton.classList.add("btn-categoria");
     boton.onclick = () => {
-      mostrarProductos(categoria);
+      mostrarProductos(catNombre);
       marcarBotonActivo(boton);
     };
     contenedorBotones.appendChild(boton);
   }
+});
 }
 
 function marcarBotonActivo(botonSeleccionado) {
@@ -72,7 +82,9 @@ function marcarBotonActivo(botonSeleccionado) {
 function mostrarProductos(filtrarCategoria = null) {
   contenedor.innerHTML = "";
 
-  const categorias = filtrarCategoria ? [filtrarCategoria] : Object.keys(productosPorCategoria);
+  const categorias = filtrarCategoria
+    ? [filtrarCategoria]
+    : ordenCategorias.filter(cat => productosPorCategoria[cat]); // usa el orden predefinido
 
   categorias.forEach((categoria) => {
     const categoriaContenedor = document.createElement("div");
@@ -81,7 +93,7 @@ function mostrarProductos(filtrarCategoria = null) {
     if (!filtrarCategoria) {
       const tituloCategoria = document.createElement("h2");
       tituloCategoria.classList.add("categoria-titulo");
-      tituloCategoria.textContent = categoria.toUpperCase();
+      tituloCategoria.textContent = categoria;
       categoriaContenedor.appendChild(tituloCategoria);
     }
 
@@ -110,18 +122,15 @@ function mostrarProductos(filtrarCategoria = null) {
       descripcion.textContent = producto.descripcion;
 
       const precio = document.createElement("div");
-        precio.classList.add("precio");
-       precio.textContent = `$${producto.precio}`;
+      precio.classList.add("precio");
+      precio.textContent = `$${producto.precio}`;
 
-      
-       contenidoDiv.appendChild(titulo);
-       contenidoDiv.appendChild(descripcion);
-       contenidoDiv.appendChild(precio);
-
+      contenidoDiv.appendChild(titulo);
+      contenidoDiv.appendChild(descripcion);
+      contenidoDiv.appendChild(precio);
 
       item.appendChild(contenidoDiv);
       item.appendChild(imgDiv);
-      
 
       productosGrid.appendChild(item);
     });
@@ -130,5 +139,4 @@ function mostrarProductos(filtrarCategoria = null) {
     contenedor.appendChild(categoriaContenedor);
   });
 }
-
 cargarProductos();

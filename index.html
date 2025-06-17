@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entre Uvas y Café</title>
-     <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="assets/img/icono.png">
     <!-- Librerías externas de íconos (cargar antes de tus estilos por si los usas en tu CSS) -->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
@@ -21,41 +20,39 @@
     <link rel="stylesheet" href="assets/css/quees.css">
     <link rel="stylesheet" href="assets/css/product.css">
     <link rel="stylesheet" href="assets/css/contacto.css">
-    <link rel="stylesheet" href="assets/css/ubicacion.css">     
+    <link rel="stylesheet" href="assets/css/ubicacion.css">
 </head>
-<body>  
-  <!--===== WHATSAPP FLOTANTE =====-->
-  <div class="nav-bottom">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <div class="popup-whatsapp fadeIn">
-        <div class="content-whatsapp -top">
-            <button type="button" class="closePopup">
-                <i class="material-icons icon-font-color">close</i>
-            </button>
+<body>
+    <!--===== WHATSAPP FLOTANTE =====-->
+    <div class="nav-bottom">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <div class="popup-whatsapp fadeIn">
+            <div class="content-whatsapp -top">
+                <button type="button" class="closePopup">
+                    <i class="material-icons icon-font-color">close</i>
+                </button>
 
-            <p>
-                <img src="assets/img/secretary.png" width="50" /> ¡Hola!, Bienvenido/a a Entre Uvas y Café, ¿En qué
-                podemos
-                ayudarte?
-            </p>
+                <p>
+                    <img src="assets/img/secretary.png" width="50" /> ¡Hola!, Bienvenido/a a Entre Uvas y Café, ¿En qué
+                    podemos
+                    ayudarte?
+                </p>
+            </div>
+            <div class="content-whatsapp -bottom">
+                <input class="whats-input" id="whats-in" type="text" placeholder="Enviar mensaje..." />
+                <button class="send-msPopup" id="send-btn" type="button">
+                    <i class="material-icons icon-font-color--black">send</i>
+                </button>
+            </div>
         </div>
-        <div class="content-whatsapp -bottom">
-            <input class="whats-input" id="whats-in" type="text" placeholder="Enviar mensaje..." />
-
-            <button class="send-msPopup" id="send-btn" type="button">
-                <i class="material-icons icon-font-color--black">send</i>
-            </button>
-        </div>
+        <button type="button" id="whats-openPopup" class="whatsapp-button">
+            <div class="float">
+                <i class="fa fa-whatsapp my-float"></i>
+            </div>
+        </button>
+        <div class="circle-anime"></div>
     </div>
-    <button type="button" id="whats-openPopup" class="whatsapp-button">
-        <div class="float">
-            <i class="fa fa-whatsapp my-float"></i>
-        </div>
-    </button>
-    <div class="circle-anime"></div>
-</div>
     <!--===== FIN WHATSAPP FLOTANTE =====-->
-
     <!--===== INICIO HEADER =====-->
     <header class="header">
         <nav class="nav bd-grid">
@@ -73,7 +70,9 @@
                     <li class="nav__item"><a href="#ubicacion" class="nav__link">UBICACIÓN</a></li>
                     <li class="nav__item">
                         <button class="boton cuatro">
-                            <span><a href="#contacto" class="nav__link"><font color="#fff">Contacto</font></a></span>
+                            <span><a href="#contacto" class="nav__link">
+                                    <font color="#fff">Contacto</font>
+                                </a></span>
                         </button>
                     </li>
                 </ul>
@@ -85,8 +84,6 @@
     </header>
     <!--===== FIN HEADER ordenado hasta aqui =====-->
     <main class="l-main">
-        
-
         <!--===== INICIO HOGAR =====-->
         <section class="home">
             <div class="slider">
@@ -122,59 +119,50 @@
                     </div>
                 </div>
             </div>
-
             <!-- controls  -->
             <div class="controls">
                 <div class="prev">
                     < </div>
                         <div class="next">></div>
                 </div>
-
                 <!-- indicators -->
                 <div class="indicator">
                 </div>
-
         </section>
         <!--===== FIN HOGAR =====-->
-
         <!--===== INICIO QUE ES =====-->
-        <section class="seccion quienes" id="quienes"> 
+        <section class="seccion quienes" id="quienes">
             <div class="quienes__contenido">
                 <h2 class="seccion-titulo quienes__titulo">¿QUIÉNES SOMOS?</h2>
                 <p class="quienes__historia">
-                    “Entre Uvas y Café” nació del sueño de dos amigos por crear un espacio acogedor, donde el buen café y las buenas conversaciones fueran el centro. Nuestra historia es una mezcla de pasión, amistad y muchas tazas de inspiración.
+                    “Entre Uvas y Café” nació del sueño de dos amigos por crear un espacio acogedor, donde el buen café
+                    y las buenas conversaciones fueran el centro. Nuestra historia es una mezcla de pasión, amistad y
+                    muchas tazas de inspiración.
                 </p>
             </div>
             <div class="quienes__container">
-                <!-- Columna izquierda (imagen + texto) -->
+              
                 <div class="quienes__info">
-                    
                     <div class="quienes__foto">
                         <img src="assets/img/WhatsApp Image 2025-04-21 at 9.17.50 AM.JPG" alt="Imagen quienes somos">
                     </div>
-                    
                 </div>
-        
                 <!-- Columna derecha (equipo) -->
                 <div class="quienes__equipo">
                     <div class="quienes__card">
-                        
                         <h3 class="quienes__nombre">Daniela Araya</h3>
                         <p class="quienes__rol">Fundadora & Barista</p>
-                        <p class="quienes__desc">Apasionada por el café artesanal, Isabel ha recorrido Latinoamérica en búsqueda de granos únicos.</p>
+                        <p class="quienes__desc">Apasionada por el café artesanal, Isabel ha recorrido Latinoamérica en
+                            búsqueda de granos únicos.</p>
                     </div>
-        
                     <div class="quienes__card">
-                       
                         <h3 class="quienes__nombre">Carlos Rivas</h3>
                         <p class="quienes__rol">Cofundador & Sommelier de Té</p>
-                        <p class="quienes__desc">Carlos aporta su experiencia en tés del mundo, fusionando tradición y modernidad en cada infusión.</p>
+                        <p class="quienes__desc">Carlos aporta su experiencia en tés del mundo, fusionando tradición y
+                            modernidad en cada infusión.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        
         </section>
         <section class="seccion servicios centrado" id="servicios">
             <h2 class="seccion-titulo">SERVICIOS</h2>
@@ -203,82 +191,82 @@
                     <div class="card ">
                         <img class="beneficios__img" src="assets/img/delivery.jpg">
                         <h3 class="beneficios__subtitulo">Delivery</h3>
-                        <p class="beneficios__texto">Recibe tus productos favoritos en la comodidad de tu hogar con nuestro servicio de delivery. Rápido, seguro.</p>
+                        <p class="beneficios__texto">Recibe tus productos favoritos en la comodidad de tu hogar con
+                            nuestro servicio de delivery. Rápido, seguro.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!--===== INICIO PRODUCTOS =====-->
         <div id="productos" class="seccion centrado">
             <h1 class="seccion-titulo">PRODUCTOS DISPONIBLES</h1>
             <section id="botones-categorias" class="botones-categorias"></section>
            
-            <!-- Contenedor donde se mostrarán los productos -->
             <section class="" id="contenedor-productos">
-               
             </section>
         </div>
-        
-        <!--===== INICIO PRODUCTOS =====-->
-        
         <!--===== FIN PRODUCTOS =====-->
+        <!--===== INICIO OPINIONES DE CLIENTES =====-->
+        <section class="seccion opiniones centrado" id="opiniones">
+            <h2 class="seccion-titulo">OPINIONES DE CLIENTES</h2>
+            <div class="opiniones__container ">
+               
+                <div class="opinion__card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9526/9526392.png" alt="Cliente 1"
+                        class="opinion__img">
+                    <h3 class="opinion__nombre">Madeline F</h3>
+                    <p class="opinion__texto">Exquisito todo, tienen opciones individuales para servir ahí y también
+                        familiares, se nota que todo es muy fresco y como hecho en casa.
+                        Destaco el pie de limón y el carrot cake, ah! Y las galletas! Me falta probar otros dulces, pero
+                        también tienen salados, las empanadas deliciosas. Finalmente el barista de café se maneja muy
+                        bien!
+                        Gran calidad de café y muy buen servicio..</p>
+                    <div class="estrellas">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                </div>
+                
+                <div class="opinion__card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9037/9037234.png" alt="Cliente 2"
+                        class="opinion__img">
+                    <h3 class="opinion__nombre">Jaqueline V</h3>
+                    <p class="opinion__texto">
+                        ✨ Si andas por Cachagua… ¡no te puedes perder este lugar mágico! ✨
+                        Un rincón hermoso, acogedor y lleno de detalles lindos que te invitan a quedarte.
 
-<!--===== INICIO OPINIONES DE CLIENTES =====-->
-<section class="seccion opiniones centrado" id="opiniones">
-    <h2 class="seccion-titulo">OPINIONES DE CLIENTES</h2>
-    <div class="opiniones__container ">
-        <!-- Opinión 1 -->
-        <div class="opinion__card">
-            <img src="https://cdn-icons-png.flaticon.com/512/9526/9526392.png" alt="Cliente 1" class="opinion__img">
-            <h3 class="opinion__nombre">Madeline F</h3>
-            <p class="opinion__texto">Exquisito todo, tienen opciones individuales para servir ahí y también familiares, se nota que todo es muy fresco y como hecho en casa.
-                 Destaco el pie de limón y el carrot cake, ah! Y las galletas! Me falta probar otros dulces, pero también tienen salados, las empanadas deliciosas. Finalmente el barista de café se maneja muy bien! 
-                 Gran calidad de café y muy buen servicio..</p>
-            <div class="estrellas">
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
+                        ☕️ Café de especialidad con granos seleccionados (¡de verdad increíble!)
+                        🍰 Pasteles caseros hechos por sus propios dueños, con amor en cada bocado.</p>
+                    <div class="estrellas">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                </div>
+               
+                <div class="opinion__card">
+                    <img src="https://cdn-icons-png.freepik.com/512/9182/9182889.png" alt="Cliente 3"
+                        class="opinion__img">
+                    <h3 class="opinion__nombre">Camilo S</h3>
+                    <p class="opinion__texto">Excelente, el mejor café de la zona y a muy buen precio. Muy amable el
+                        personal,
+                        la mejor carrot cake que he comido hace tiempo.</p>
+                    <div class="estrellas">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Opinión 2 -->
-        <div class="opinion__card">
-            <img src="https://cdn-icons-png.flaticon.com/512/9037/9037234.png" alt="Cliente 2" class="opinion__img">
-            <h3 class="opinion__nombre">Jaqueline V</h3>
-            <p class="opinion__texto">
-                ✨ Si andas por Cachagua… ¡no te puedes perder este lugar mágico! ✨
-             Un rincón hermoso, acogedor y lleno de detalles lindos que te invitan a quedarte.
-
-                 ☕️ Café de especialidad con granos seleccionados (¡de verdad increíble!)
-              🍰 Pasteles caseros hechos por sus propios dueños, con amor en cada bocado.</p>
-            <div class="estrellas">
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-            </div>
-        </div>
-
-        <!-- Opinión 3 -->
-        <div class="opinion__card">
-            <img src="https://cdn-icons-png.freepik.com/512/9182/9182889.png" alt="Cliente 3" class="opinion__img">
-            <h3 class="opinion__nombre">Camilo S</h3>
-            <p class="opinion__texto">Excelente, el mejor café de la zona y a muy buen precio. Muy amable el personal,
-                 la mejor carrot cake que he comido hace tiempo.</p>
-            <div class="estrellas">
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-                <span class="estrella">★</span>
-            </div>
-        </div>
-    </div>
-</section>
-<!--===== FIN OPINIONES DE CLIENTES =====-->
-
+        </section>
+        <!--===== FIN OPINIONES DE CLIENTES =====-->
         <!--===== INICIO UBICACIÓN =====-->
         <section class="seccion ubicacion centrado" id="ubicacion">
             <h2 class="seccion-titulo">UBICACIÓN</h2>
@@ -301,96 +289,73 @@
                     <p>Estamos ubicados en Avenida Cachagua #174, local B.</p>
                 </div>
             </div>
-             <!-- Elfsight Google Reviews | 
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-9c6f1b44-15e3-4152-a1d2-c37af611925c" data-elfsight-app-lazy></div> pruebauvasycafe -->
-
         </section>
         <!--===== FIN UBICACIÓN =====-->
-
-       
-
         <!--===== INICIO CONTACTO =====-->
-        <section class="seccion contacto centrado" id="contacto"> 
-    <h2 class="seccion-titulo">CONTACTO</h2>
-
-    <div class="container__contacto bd-grid">
-       <!-- FORMULARIO DE CONTACTO -->
-<form id="formulario-contacto" class="contact__form">
-  <!-- Honeypot oficial para evitar bots -->
-  <input type="text" name="_honey" style="display: none;">
-
-  <!-- Formsubmit config -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-
-  <!-- Campos del usuario con etiquetas -->
-  <label for="nombre">Nombre</label>
-  <input type="text" id="nombre" name="nombre"  class="contact__input" required>
-
-  <label for="email">Correo electrónico</label>
-  <input type="email" id="email" name="email"  class="contact__input" required>
-
-  <label for="asunto">Asunto</label>
-  <input type="text" id="asunto" name="asunto"  class="contact__input" required>
-
-  <label for="mensaje">Mensaje</label>
-  <textarea id="mensaje" name="mensaje" rows="10" class="contact__input"  required></textarea>
-
-  <button type="submit" class="contact__button button" style="background-color: #3e1663;">Enviar</button>
-</form>
-
-
-        
-    </div>
-</section>
-
-
-
+        <section class="seccion contacto centrado" id="contacto">
+            <h2 class="seccion-titulo">CONTACTO</h2>
+            <div class="container__contacto bd-grid">
+                <!-- FORMULARIO DE CONTACTO -->
+                <form id="formulario-contacto" class="contact__form">
+                    <!-- Honeypot oficial para evitar bots -->
+                    <input type="text" name="_honey" style="display: none;">
+                    <!-- Formsubmit config -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- Campos del usuario con etiquetas -->
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="contact__input" required>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" class="contact__input" required>
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" class="contact__input" required>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="10" class="contact__input" required></textarea>
+                    <button type="submit" class="contact__button button"
+                        style="background-color: #3e1663;">Enviar</button>
+                </form>
+            </div>
+        </section>
         <script defer src="assets/javascript/contacto.js"></script>
         <!--===== FIN CONTACTO =====-->
-
         <!--===== INICIO FOOTER ELEGANTE CON CONTACTO =====-->
-<footer class="footer">
-    <div class="footer__container">
-        <!-- Logo y nombre -->
-        <div class="footer__logo-section">
-            <img src="assets/img/logo-footer.png" alt="Logo Entre Uvas y Café" class="footer__logo-img">
-            <h3 class="footer__title">Entre Uvas y Café</h3>
-        </div>
-
-        <!-- Redes sociales -->
-        <div class="footer__social-section">
-            <h4>Síguenos</h4>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=100070732844217" class="footer__icon">
-                    <i class='bx bxl-facebook'></i>
-                </a>
-                <a href="https://www.instagram.com/entreuvasycafe/" class="footer__icon">
-                    <i class='bx bxl-instagram'></i>
-                </a>
-                <a href="https://wa.me/56984230531?text=Hola!%20Necesito%20información!" class="footer__icon">
-                    <i class='bx bxl-whatsapp'></i>
-                </a>
+        <footer class="footer">
+            <div class="footer__container">
+                <!-- Logo y nombre -->
+                <div class="footer__logo-section">
+                    <img src="assets/img/logo-footer.png" alt="Logo Entre Uvas y Café" class="footer__logo-img">
+                    <h3 class="footer__title">Entre Uvas y Café</h3>
+                </div>
+                <!-- Redes sociales -->
+                <div class="footer__social-section">
+                    <h4>Síguenos</h4>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/profile.php?id=100070732844217" class="footer__icon">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://www.instagram.com/entreuvasycafe/" class="footer__icon">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="https://wa.me/56984230531?text=Hola!%20Necesito%20información!" class="footer__icon">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Contacto -->
+                <div class="footer__contact-section">
+                    <h4>Contáctanos</h4>
+                    <p><i class='bx bx-map'></i> Av. Delicias 123, Santiago, Chile</p>
+                    <p><i class='bx bx-envelope'></i> contacto@entreuvasycafe.cl</p>
+                    <p><i class='bx bx-phone'></i> +56 9 8423 0531</p>
+                </div>
             </div>
-        </div>
-
-        <!-- Contacto -->
-        <div class="footer__contact-section">
-            <h4>Contáctanos</h4>
-            <p><i class='bx bx-map'></i> Av. Delicias 123, Santiago, Chile</p>
-            <p><i class='bx bx-envelope'></i> contacto@entreuvasycafe.cl</p>
-            <p><i class='bx bx-phone'></i> +56 9 8423 0531</p>
-        </div>
-    </div>
-
-    <!-- Derechos reservados -->
-    <div class="footer__bottom">
-        <p>&#169; 2025 Todos los derechos reservados</p>
-    </div>
-</footer>
-<!--===== FIN FOOTER =====-->
-    </main> <!-- Cierre de la etiqueta main -->
+            <!-- Derechos reservados -->
+            <div class="footer__bottom">
+                <p>&#169; 2025 Todos los derechos reservados</p>
+            </div>
+        </footer>
+        <!--===== FIN FOOTER =====-->
+    </main>
     <!-- Librerías externas primero (por si tus scripts dependen de ellas) -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
