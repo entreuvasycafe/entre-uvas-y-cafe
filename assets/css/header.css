@@ -6,7 +6,7 @@
     max-width: 1024px;
     display: grid;
     grid-template-columns: 100%;
-    grid-column-gap: 4rem;
+    grid-column-gap: 2rem;
     width: calc(100% - 2rem);
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: var(--font-semi);
+    font-size: 13px;
 }
 
 @media screen and (max-width: 768px) {
@@ -45,7 +45,7 @@
 }
 
 .nav__item {
-    margin-bottom: var(--mb-4);
+    margin-bottom: var(--mb-2);
 }
 
 .nav__link {
@@ -72,6 +72,7 @@
     color: var(--second-color);
   
 }
+
 
 .nav__toggle {
     color: var(--second-color);
@@ -163,7 +164,7 @@
     justify-content: center;
     background-color: #9b87ac;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 300;
     border: none;
     cursor: pointer;
@@ -207,10 +208,6 @@
 
 .nav__logo img {
     height: var(--logo-height);
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
-.nav__title {
-    font-size: 15px;
-    color: #3e1663;
-}

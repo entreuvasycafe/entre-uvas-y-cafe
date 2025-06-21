@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/img/icono.png">
+  <title>Gantt entreuvasycafe</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Frappe Gantt CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt@0.5.0/dist/frappe-gantt.css" />
+  
+  <style>
+    body {
+      padding: 20px;
+    }
+    #gantt {
+      overflow-x: auto;
+      border: 1px solid #1d2934;
+      background-color: #f0f0f0;
+      border-radius: 12px;
+      height: 500px;
+      width: 100%;
+      min-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="assets/img/icono.png" width="120px" height="120px" class="img-fluid" alt="Logo Entre Uvas y Café">
+      </div>
+      <div class="col-md-6">
+        <h1>Diagrama de Gantt del Proyecto</h1>
+        
+      </div>
+    </div>
+    
+    
+    <div id="gantt"></div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Frappe Gantt JS -->
+  <script src="https://cdn.jsdelivr.net/npm/frappe-gantt@0.5.0/dist/frappe-gantt.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tasks =
+      [
+  { id: "1", name: "Análisis del sitio actual", start: "2025-05-10", end: "2025-05-12", progress: 100 },
+  { id: "2",
+    name: "Reunir fotos e info- Nota: Faltan fotos reales proporcionadas por la clienta",
+     start: "2025-05-13", end: "2025-05-14",
+      progress: 90, dependencies: "1" },
+  { id: "3", name: "Configurar entorno", start: "2025-05-15", end: "2025-05-18", progress: 100, dependencies: "2" },
+  { id: "4",
+   name: "Actualizar carrusel- Nota: Falta foto proporcionadas por la clienta",
+    start: "2025-05-19",
+     end: "2025-05-22", progress: 95, dependencies: "3" },
+  {
+    id: "5",
+    name: "Login y admin (Firebase)- Nota: Falta implementar estilos al formulario",
+    start: "2025-05-23",
+    end: "2025-05-29",
+    progress: 90,
+    dependencies: "4"
+  },
+  {
+    id: "6",
+    name: "Presentación de productos- Nota: Falta colocar los precios reales",
+    start: "2025-05-30",
+    end: "2025-06-04",
+    progress: 90,
+    dependencies: "5"
+    
+  },
+  {
+    id: "7",
+    name: "Sección de testimonios- Nota: colocar testimonios reales de Google maps",
+    start: "2025-06-05",
+    end: "2025-06-09",
+    progress: 90,
+    dependencies: "6"
+   
+  },
+  { id: "9", name: "Formulario de contacto", start: "2025-06-10", end: "2025-06-13", progress: 0, dependencies: "7" },
+  {
+    id: "10",
+    name: "Actualizar 'Quiénes somos'- Nota:Faltan fotos y texto final del cliente",
+    start: "2025-06-14",
+    end: "2025-06-17",
+    progress: 90,
+    dependencies: "9"
+    
+  },
+  { id: "11", name: "Actualizar servicios", start: "2025-06-18", end: "2025-06-20", progress: 100, dependencies: "10" },
+  { id: "12", name: "Logo y footer", start: "2025-06-21", end: "2025-06-22", progress: 100, dependencies: "11" },
+  { id: "13", name: "Pruebas y optimización", start: "2025-06-23", end: "2025-06-28", progress: 0, dependencies: "12" },
+  { id: "14", name: "Cloudflare y seguridad", start: "2025-06-29", end: "2025-07-01", progress: 100, dependencies: "13" },
+  { id: "15", name: "Validación con clienta", start: "2025-07-02", end: "2025-07-04", progress: 0 },
+  { id: "16", name: "Capacitación clienta", start: "2025-07-05", end: "2025-07-06", progress: 0, dependencies: "15" }
+];
+  console.log("Inicializando Gantt...");
+  const gantt = new Gantt("#gantt", tasks, {
+    view_mode: 'Week'});
+
+  
+  
+  setTimeout(() => {
+  tasks.forEach((task) => {
+    const bar = gantt.get_bar(task.id);
+    const group = bar.group;
+
+    
+    let progress = parseFloat(String(task.progress).replace('%', '').trim());
+    if (isNaN(progress)) progress = 0;
+
+    console.log(`Task "${task.name}" → Progreso: ${progress}`);
+
+    // color 
+    const color =
+      progress === 100
+        ? "#198754" // verde
+        : progress >= 50
+        ? "#1d2178" // azul
+        : progress > 0
+        ? "#ede12f" // amarillo
+        : "#dc3545"; // rojo
+
+    // Seleccionar las barras
+    const mainBar = group.querySelector(".bar");
+    const progressBar = group.querySelector(".bar-progress");
+
+    // Aplicar color a ambas barras (base y progreso)
+    if (mainBar) mainBar.style.fill = color;
+    if (progressBar) progressBar.style.fill = color;
+
+    // Agregar texto centrado
+    if (mainBar) {
+      const bbox = mainBar.getBBox();
+      const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      text.setAttribute("x", bbox.x + 5);
+      text.setAttribute("y", bbox.y + bbox.height / 2 + 3);
+      text.setAttribute("fill", "white");
+      text.setAttribute("font-size", "10");
+      text.setAttribute("alignment-baseline", "middle");
+      text.textContent = `${progress}%`;
+
+      group.appendChild(text);
+    }
+  });
+}, 100); // esperar 100 ms
+    });
+  </script>
+</body>
+</html>
