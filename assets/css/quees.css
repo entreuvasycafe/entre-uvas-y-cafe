@@ -263,3 +263,10 @@
 .servicios {
     margin-top: -80px;
 }
+.btn-servicios{
+     background-color: #6a0dad;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #ffffff;
+    border-radius: 4px;
+}
