@@ -16,16 +16,19 @@
 }
 
 .ubicacion__horarios h3 {
+    font-weight: 400;
     margin-bottom: 10px;
 }
 
 .ubicacion__horarios ul {
+   
     list-style: none;
     padding: 0;
 }
 
-.ubicacion__horarios li {
+.ubicacion__horarios li strong {
     margin-bottom: 5px;
+  font-weight: 400;
 }
 
 /* Media query para dispositivos móviles */

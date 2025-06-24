@@ -34,7 +34,7 @@
 
 .diseño__item h3 {
   font-size: 1rem; /* antes 1.2rem */
-  font-weight: bold;
+  font-weight: 500;
   color: #5a4864;
   margin-bottom: 0.5rem;
 }
@@ -97,6 +97,7 @@
 
   .diseño__item h3 {
       font-size: 1rem;
+      font-weight: 400;
       margin-bottom: 0.3rem;
   }
 

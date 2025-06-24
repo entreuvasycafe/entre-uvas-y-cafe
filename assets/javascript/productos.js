@@ -91,7 +91,7 @@ function mostrarProductos(filtrarCategoria = null) {
     categoriaContenedor.classList.add("categoria-contenedor");
 
     if (!filtrarCategoria) {
-      const tituloCategoria = document.createElement("h2");
+      const tituloCategoria = document.createElement("h3");
       tituloCategoria.classList.add("categoria-titulo");
       tituloCategoria.textContent = categoria;
       categoriaContenedor.appendChild(tituloCategoria);
