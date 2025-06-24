@@ -89,49 +89,47 @@
     <main class="l-main">
         <!--===== INICIO HOGAR =====-->
         <section class="home">
-            <div class="slider">
-                <div class="slide active" style="background-image: url('assets/img/slider3.1.jpg')">
-                    <div class="container">
-                        <div class="caption">
-                            <h1>EL MEJOR CAFÉ PARA TU DÍA</h1>
-                            <p>Empieza tu jornada con el <font color="#a997b2">aroma perfecto</font> y el sabor
-                                inigualable
-                                de nuestro café de especialidad.</p>
-                            <a href="#contacto">Contáctanos</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide" style="background-image: url('assets/img/slider3.2.jpeg')">
-                    <div class="container">
-                        <div class="caption">
-                            <h1>DULCES MOMENTOS</h1>
-                            <p>Disfruta de nuestra <font color="#a997b2">pastelería artesanal</font>, el complemento
-                                ideal
-                                para una experiencia única.</p>
-                            <a href="#contacto">Contáctanos</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide" style="background-image: url('assets/img/slide-1.jpg')">
-                    <div class="container">
-                        <div class="caption">
-                            <h1>UN ESPACIO PARA COMPARTIR</h1>
-                            <p>Ven a nuestro acogedor rincón y vive momentos especiales con quienes más quieres.</p>
-                            <a href="#contacto">Contáctanos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- controls  -->
-            <div class="controls">
-                <div class="prev">
-                    < </div>
-                        <div class="next">></div>
-                </div>
-                <!-- indicators -->
-                <div class="indicator">
-                </div>
-        </section>
+  <div class="slider">
+    <div class="slide active" style="background-image: url('assets/img/slider3.1.jpg')">
+      <div class="container">
+        <div class="caption">
+          <h1>EL MEJOR CAFÉ PARA TU DÍA</h1>
+          <p>Empieza tu jornada con el <span class="highlight">aroma perfecto</span> y el sabor inigualable de nuestro café de especialidad.</p>
+          <a href="#contacto">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('assets/img/slider3.2.jpeg')">
+      <div class="container">
+        <div class="caption">
+          <h1>DULCES MOMENTOS</h1>
+          <p>Disfruta de nuestra <span class="highlight">pastelería artesanal</span>, el complemento ideal para una experiencia única.</p>
+          <a href="#contacto">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('assets/img/slide-1.jpg')">
+      <div class="container">
+        <div class="caption">
+          <h1>UN ESPACIO PARA COMPARTIR</h1>
+          <p>Ven a nuestro acogedor rincón y vive momentos especiales con quienes más quieres.</p>
+          <a href="#contacto">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <div class="controls">
+    <div class="prev">&#10094;</div>
+    <div class="next">&#10095;</div>
+  </div>
+
+  <!-- Indicadores -->
+  <div class="indicator"></div>
+ </section>
         <!--===== FIN HOGAR =====-->
         <!--===== INICIO QUE ES =====-->
         <section class="seccion quienes" id="quienes">
@@ -270,6 +268,10 @@
                     </div>
                 </div>
             </div>
+            <div class="slider-buttons">
+             <button id="btn-prev"> Anterior</button>
+             <button id="btn-next" >Siguiente </button>
+            </div>
         </section>
         <!--===== FIN OPINIONES DE CLIENTES =====-->
         <!--===== INICIO UBICACIÓN =====-->
@@ -371,13 +373,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <!-- Scripts principales y de estructura general -->
-    <script defer src="assets/javascript/main.js"></script>
     <script defer src="assets/javascript/header.js"></script>
     <script defer src="assets/javascript/footer.js"></script>
     <!-- Scripts por sección o funcionalidad -->
     <script defer src="assets/javascript/whatsapp.js"></script>
     <script defer src="assets/javascript/carrusel.js"></script>
-    <script defer src="assets/javascript/quees.js"></script>
+    <script defer src="assets/javascript/opiniones.js"></script>
     <script defer src="assets/javascript/contacto.js"></script>
     <!-- Scripts especiales o con módulos ES6 -->
     <script type="module" src="assets/javascript/productos.js"></script>
