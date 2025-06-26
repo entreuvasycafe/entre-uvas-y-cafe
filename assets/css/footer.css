@@ -38,9 +38,7 @@
     font-size: 1.2rem;
 }
 
-.footer__logo-img{
-    padding-left: 5rem;
-}
+
 
 @media (min-width: 768px) {
     .footer__container {
@@ -49,6 +47,10 @@
         max-width: 1000px;
         margin: 0 auto;
     }
+.footer footer__logo-img{
+    margin-left: 5rem;
+}
+
 }
 
 .footer__logo-section {
@@ -58,7 +60,8 @@
 .footer__logo-img {
     height: 100px;
     margin-bottom: 0.5rem;
-    margin-left: 4.5rem;
+    margin-left: 5rem;
+    padding-left: 4rem;
 }
 
 .footer__title {
