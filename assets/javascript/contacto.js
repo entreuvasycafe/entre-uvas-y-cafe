@@ -22,7 +22,7 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
       }
     });
 
-    fetch("https://formsubmit.co/henroki1989@gmail.com", { // <-- CAMBIA ESTO
+    fetch("https://formsubmit.co/entreuvasycafe@gmail.com", { 
       method: "POST",
       body: formData,
       headers: {
