@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1yBUmSk6qA1ESbtYyE1R",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1748069870844-WhatsApp%20Image%202025-04-21%20at%209.17.42%20AM%20(1).jpeg?alt=media&token=971ca67d-fbde-49fa-893f-dfee4bfcb049",
+    "categoria": "Quiches",
+    "descripcion": " Exquisita crema pastelera horneada sobre una masa de hojaldre y mantequilla.",
+    "precio": 12990,
+    "titulo": "Quiche de espinaca y camaron"
+  },
+  {
+    "id": "31ZuFPXjV3HsZzIVknwd",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1748069716856-WhatsApp%20Image%202025-04-21%20at%209.17.47%20AM.jpeg?alt=media&token=881a3ec4-07a5-4d79-8c9e-e3ea4a0668a7",
+    "categoria": "Empanadas",
+    "precio": 3990,
+    "titulo": "Empanada de pino ",
+    "descripcion": "Relleno de carne picada, cebolla, huevo duro, aceitunas y, opcionalmente, pasas. "
+  },
+  {
+    "id": "9MlJBTrWK3KgiWYXTcqR",
+    "descripcion": "Café exótico con sabores de naranja y coco, café de especialidad WHOLE BEAN",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1750126682356-WhatsApp%20Image%202025-04-21%20at%209.17.44%20AM%20(1).jpeg?alt=media&token=54e11761-256d-4e34-a2dd-52ae76942495",
+    "precio": 12990,
+    "titulo": "Café exotico variedades",
+    "categoria": "Café especialidad"
+  },
+  {
+    "id": "ACKBBtv8bFjbf5dWj89d",
+    "titulo": "kuchen de Manzana",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1747708704688-106563509_1321587064711127_3489713167747332201_n.jpg?alt=media&token=40ec388b-4b9c-41c0-97ff-6d1581545929",
+    "descripcion": "Tradicional y Delicioso kuchen de Manzana",
+    "precio": 7990,
+    "categoria": "Tartaletas"
+  },
+  {
+    "id": "PzLdvLT6zGJAQkq19eyA",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1748068968258-WhatsApp%20Image%202025-04-21%20at%209.17.46%20AM.jpeg?alt=media&token=74701577-87b4-41bb-add2-9babf42c8614",
+    "categoria": "Té en hoja",
+    "descripcion": "Bebida preparada con las hojas secas y preparadas de la planta de té",
+    "precio": 7990,
+    "titulo": "Te en hojas variedades"
+  },
+  {
+    "id": "WYVizdv8YSWtidK1cL8v",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1748068760971-WhatsApp%20Image%202025-04-21%20at%209.17.48%20AM%20(2).jpeg?alt=media&token=c4d02055-4124-4b14-a53e-a226489c4b63",
+    "categoria": "Café especialidad",
+    "descripcion": "granos de café de alta calidad, cuidadosamente seleccionados y procesados",
+    "precio": 6990,
+    "titulo": "Cafe Variedad Bourbon"
+  },
+  {
+    "id": "bkXOLzSjBauyHKxs689z",
+    "titulo": "Empanadas Lomo Saltado",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1750476659951-138753037_221930029405426_1806507329434554366_n.jpg?alt=media&token=cffb56f4-cbb4-4f61-8fdd-d001500b6062",
+    "descripcion": "El lomo es un corte magro, por lo que se logra una empanada más liviana y suave. La grasa, el sabor y la jugosidad de una empanada.",
+    "precio": 4990,
+    "categoria": "Empanadas"
+  },
+  {
+    "id": "cIq8SIa9Fc8oTNssU7Je",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1748068672200-WhatsApp%20Image%202025-04-21%20at%209.17.47%20AM%20(3).jpeg?alt=media&token=c7c63073-f909-462a-bbf1-4b59e8a32399",
+    "categoria": "Café especialidad",
+    "descripcion": "granos de café de alta calidad, cuidadosamente seleccionados y procesados",
+    "precio": 7990,
+    "titulo": "Cafe Variedad Variedad Pacamara"
+  },
+  {
+    "id": "dpSBLxGSLDO0OnJWCKWc",
+    "titulo": "kuchen de Nuez",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1747709280872-182505788_1833873793439665_5523856768044213602_n.jpg?alt=media&token=2ee6d573-79ca-4588-8d81-d71cae49c334",
+    "descripcion": "Un clásico de la pasteleria tradicional chilena 🔥😍",
+    "precio": 8990,
+    "categoria": "Tartaletas"
+  },
+  {
+    "id": "l3zdjHzPLQxRQ9QYVGTu",
+    "titulo": "Quiche de Vegetales ",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1750476013438-316449218_5951780068168084_2985176416753583817_n.webp?alt=media&token=edde2dd0-10ae-458b-b83b-8f88bb13c296",
+    "descripcion": "especial de temporada, esparragos, choclo, champiñones❤️🌽🧅🍄",
+    "precio": 14990,
+    "categoria": "Quiches"
+  },
+  {
+    "id": "lVqMKlo3ApZG7254EJI5",
+    "titulo": "Volcan de chocolate ",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1747280820124-WhatsApp%20Image%202025-04-21%20at%209.17.43%20AM%20(1).jpeg?alt=media&token=ce8b4f86-648d-43ee-9781-51f0a9b7a652",
+    "descripcion": "Volcán de Chocolate 🍫con Helado Artesanal, puedes elegir tú sabor favorito❤️",
+    "categoria": "Postres",
+    "precio": 5990
+  },
+  {
+    "id": "spWrXyrwWaAURvwMI5J9",
+    "titulo": "Suspiro Limeño",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1747281735974-SaveClip.App_321357944_658097996004280_5449315330254400389_n.jpg?alt=media&token=d4e6b6f7-243e-4307-bbbb-e15e8f9b028d",
+    "descripcion": "Suspiro Limeño tradicional - Frambuesa o Maracuya y Tiramisu 🍰",
+    "precio": 8990,
+    "categoria": "Postres"
+  },
+  {
+    "id": "tUI8xGjKc3zREcCWEhSs",
+    "titulo": "Pie de Maracuyá",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1747282043807-WhatsApp%20Image%202025-04-21%20at%209.17.49%20AM%20(3).jpeg?alt=media&token=4acd3f38-aa6b-4d98-a556-8f6c30a4b1f6",
+    "precio": 12990,
+    "categoria": "Postres",
+    "descripcion": "postre con una base de galletas y un relleno de crema a base de maracuya🍰"
+  },
+  {
+    "id": "tWgmfU6D8zDaSz8vrU4k",
+    "titulo": "Torta de mil hojas",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1747282644891-WhatsApp%20Image%202025-04-21%20at%209.17.49%20AM%20(2).jpeg?alt=media&token=ee2325e8-2770-46e7-b91f-d708cf91dd59",
+    "descripcion": "Contiene merengue o crema pastelera entre dos capas de hojaldre espolvoreado con azúcar glas 🍰",
+    "categoria": "Tortas",
+    "precio": 20990
+  },
+  {
+    "id": "uPBLCzqyd4AMyHArmj0s",
+    "titulo": "Torta de Tres leches/Arandanos",
+    "imagen": "https://firebasestorage.googleapis.com/v0/b/pruebaentreuvasycafe.firebasestorage.app/o/imagenes%2F1747709721037-317121759_230680335957771_8802434549633566257_n.webp?alt=media&token=490cd8a7-1db6-496a-8e2b-51d56edc6a86",
+    "descripcion": "Biscocho bañado con tres tipos de lacteo",
+    "precio": 14990,
+    "categoria": "Tortas"
+  }
+]

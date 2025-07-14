@@ -82,17 +82,23 @@ body {
     font-size: var(--normal-font-size);
     color: var(--second-color);
 }
+/* Evita que el texto se corte en varias líneas 
+h1{
+    font-size: 0.9rem;  
+    font-weight: 400;
+     white-space: nowrap; 
+   
+}*/
 
-h1,
 h2,
 p {
     margin: 0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+
+ul li  {
     list-style: none;
+
 }
 
 a {
@@ -264,6 +270,7 @@ body {
 
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
+
     .nav__menu {
         width: 100%;
         
