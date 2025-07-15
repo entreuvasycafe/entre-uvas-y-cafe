@@ -49,15 +49,19 @@
         position: fixed;
         top: var(--header-height);
         right: -100%;
-        width: 80%;
-        height: 100%;
-        padding: 2rem;
+        width: 73%;
+          display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* ← Alinea a la izquierda */
+        justify-content: flex-start;
         background-color: var(--second-color);
         transition: 0.5s;
     }
+
 }
 
-.nav__item {
+.nav__item  {
+    
     margin: 0;
     padding: 0;
 }
@@ -106,7 +110,8 @@
 
 /*=== Show menu ===*/
 .show {
-    right: 0;
+      
+    right: 0px;
 }
 
 /*BUTTONS*/
@@ -138,7 +143,7 @@
     }
 
     .nav__item {
-        margin-left: var(--mb-4);
+        margin-left: 0.7rem;
         margin-bottom: 0;
     }
 
@@ -232,7 +237,7 @@
 }
 
 .nav__logo h1 {
-   font-size: 0.9rem;
+   font-size: 0.8rem;
     font-weight: 450;
     white-space: nowrap;
     

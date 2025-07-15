@@ -82,13 +82,7 @@ body {
     font-size: var(--normal-font-size);
     color: var(--second-color);
 }
-/* Evita que el texto se corte en varias líneas 
-h1{
-    font-size: 0.9rem;  
-    font-weight: 400;
-     white-space: nowrap; 
-   
-}*/
+
 
 h2,
 p {
@@ -284,12 +278,6 @@ body {
         /* Asegúrate de que los contenedores no se desborden */
     }
 
-    .nav__title {
-        font-size: 1rem;
-        /* Ajusta el tamaño de la fuente para pantallas pequeñas */
-        margin-top: 5px;
-    }
-
     .nav__menu {
         position: fixed;
         top: var(--header-height);
@@ -307,7 +295,7 @@ body {
     }
 
     .nav__item {
-        margin-bottom: var(--mb-4);
+        margin-bottom: var(--mb-3);
     }
 
     .nav__link {
