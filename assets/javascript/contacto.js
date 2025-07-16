@@ -22,7 +22,7 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
       }
     });
 
-    fetch("https://formsubmit.co/entreuvasycafe@gmail.com", { 
+    fetch("https://formsubmit.co/0cea6185b3d17ba101720836f2587765", { 
       method: "POST",
       body: formData,
       headers: {
