@@ -165,7 +165,7 @@
 /*===== RESPONSIVE =====*/
 @media screen and (max-width: 768px) {
     .home {
-        height: 63vh;
+        height: 73vh;
         padding: 0;
         overflow: hidden;
         position: relative;
