@@ -7,8 +7,8 @@
 
 .home .slide {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: flex-end;
     text-align: center;
-    padding-bottom: 5px; /* ajusta esta distancia según lo que necesites */
+    padding-bottom: 5px;
 }
 
 @keyframes slide {
@@ -48,7 +48,7 @@
 }
 
 .home .caption {
-    background-color: rgba(77, 39, 113, 0.7); /* Caja transparente con color */
+    background-color: rgba(77, 39, 113, 0.7);
     padding: 40px;
     border-radius: 10px;
     width: 80%;
@@ -56,14 +56,14 @@
     color: #eee;
 }
 
-.home .caption h1 {
-    font-size: 22px;
+.home .caption h2 {
+    font-size: 28px;
     font-weight: 400;
     color: #eee;
     margin: 0;
 }
 
-.home .slide.active .caption h1 {
+.home .slide.active .caption h2 {
     opacity: 0;
     animation: captionText 0.5s ease forwards;
     animation-delay: 1s;
@@ -110,13 +110,13 @@
 .home .controls .prev,
 .home .controls .next {
     position: absolute;
-    z-index: 2;
     top: 50%;
-    height: 40px;
-    width: 40px;
     margin-top: -20px;
-    color: #ffffff;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
     background-color: #3e1663;
+    color: #ffffff;
     text-align: center;
     line-height: 40px;
     font-size: 20px;
@@ -141,8 +141,8 @@
     position: absolute;
     left: 50%;
     bottom: 30px;
-    z-index: 2;
     transform: translateX(-50%);
+    z-index: 2;
     cursor: pointer;
 }
 
@@ -150,8 +150,8 @@
     display: inline-block;
     width: 25px;
     height: 25px;
-    color: #ffffff;
     background-color: #3e1663;
+    color: #ffffff;
     border-radius: 50%;
     text-align: center;
     line-height: 25px;
@@ -162,12 +162,13 @@
     background-color: #a997b2;
 }
 
+/*===== RESPONSIVE =====*/
 @media screen and (max-width: 768px) {
     .home {
-        height: 100vh; /* Ocupa toda la pantalla */
-        padding: 0; /* elimina padding vertical si no lo necesitas */
-        position: relative;
+        height: 63vh;
+        padding: 0;
         overflow: hidden;
+        position: relative;
     }
 
     .home .slide {
@@ -180,19 +181,19 @@
 
     .home .slide.active {
         display: flex;
-        align-items: flex-end; /* o center según diseño */
         justify-content: center;
-        height: 100%;
-        width: 100%;
+        align-items: flex-end;
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .home .caption {
         padding: 60px;
         width: 90%;
-        height: 60vh; /* Ocupa toda la pantalla */
+        height: 45vh;
         max-width: 100%;
         color: white;
         z-index: 2;
@@ -204,7 +205,7 @@
 
     .caption p {
         font-size: clamp(42px, 10vw, 42px);
-        line-height: 1.8; /* Aumenta el espacio entre líneas */
+        line-height: 1.8;
     }
 
     .caption a {
@@ -218,6 +219,7 @@
     }
 }
 
+/* Ocultar controles en general */
 .controls .prev,
 .controls .next {
     display: none;

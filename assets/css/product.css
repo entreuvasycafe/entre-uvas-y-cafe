@@ -33,29 +33,29 @@
 }
 
 .diseño__item h3 {
-  font-size: 1rem; /* antes 1.2rem */
+  font-size: 1rem;
   font-weight: 500;
   color: #5a4864;
   margin-bottom: 0.5rem;
 }
 
 .diseño__item p {
- font-size: 0.95rem; /* antes 1rem */
+ font-size: 0.95rem; 
   color: #555;
   margin: 0.3rem 0;
 }
 
 .diseño__item .precio {
   font-weight: bold;
-  font-size: 1rem; /* antes 1.1rem */
+  font-size: 1rem; 
   color: #5a4864;
   margin-top: 0.5rem;
 }
 
 /* Imagen a la derecha */
 .diseño__img {
-  width: 150px;  /* antes 200px */
-  height: 150px; /* antes 200px */
+  width: 150px;  
+  height: 150px; 
   border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
