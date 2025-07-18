@@ -266,3 +266,8 @@
     color: #ffffff;
     border-radius: 4px;
 }
+
+.btn-servicios:hover{
+  
+    background: #795a8f;
+}

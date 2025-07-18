@@ -258,10 +258,6 @@ body {
     display: none;
   }
 }
-
-
-
-
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
 

@@ -90,6 +90,11 @@
     border-radius: 4px;
 }
 
+.home .caption a:hover{
+  transform: scale(400);
+  background: #795a8f;
+}
+
 .home .slide.active .caption a {
     opacity: 0;
     animation: captionText 0.5s ease forwards;

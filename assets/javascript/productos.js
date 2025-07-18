@@ -28,7 +28,8 @@ const ordenCategorias = [
   "Quiches",
   "Empanadas",
   "Té en hoja",
-  "Café especialidad"
+  "Café especialidad",
+  "Otros"
 ];
 
 async function cargarProductos() {
@@ -37,12 +38,15 @@ async function cargarProductos() {
 
   querySnapshot.forEach((doc) => {
     const data = doc.data();
-    if (!productosPorCategoria[data.categoria]) {
-      productosPorCategoria[data.categoria] = [];
-    }
-    productosPorCategoria[data.categoria].push(data);
+   const categoria = (data.categoria || "").trim(); // ← Usamos la versión limpia
+if (!productosPorCategoria[categoria]) {
+  productosPorCategoria[categoria] = [];
+}
+productosPorCategoria[categoria].push(data);
   });
-
+// 🔍 Agrega los logs aquí
+  console.log("Categorías cargadas:", Object.keys(productosPorCategoria));
+  console.log("Contenido de 'Otros':", productosPorCategoria["Otros"]);
   crearBotonesCategorias(); // crea los botones
   mostrarProductos(); // muestra todos al inicio
 }
@@ -84,9 +88,11 @@ function mostrarProductos(filtrarCategoria = null) {
 
   const categorias = filtrarCategoria
     ? [filtrarCategoria]
-    : ordenCategorias.filter(cat => productosPorCategoria[cat]); // usa el orden predefinido
+     : ordenCategorias.filter(cat => productosPorCategoria[cat]);
 
   categorias.forEach((categoria) => {
+    if (!productosPorCategoria[categoria]) return;
+
     const categoriaContenedor = document.createElement("div");
     categoriaContenedor.classList.add("categoria-contenedor");
 
