@@ -130,7 +130,7 @@ a {
 .seccion-titulo::after {
     content: "";
     position: absolute;
-    width: 80px; /* ancho fijo más corto que el texto */
+    width: 80px; 
     height: 2px;
     left: 50%;
     transform: translateX(-50%);
@@ -146,7 +146,7 @@ a {
     justify-content: center;
     text-align: center;
     padding: 2rem 0;
-    gap: 1.5rem; /* Espaciado vertical entre elementos */
+    gap: 1.5rem; 
 }
 
 /* Estilos generales para evitar desbordamiento horizontal */
@@ -154,7 +154,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* Evita el desbordamiento horizontal */
+    
 }
 
 
@@ -217,7 +217,7 @@ body {
   }
 
   .opinion__card {
-    display: none; /* por defecto, JS mostrará solo una */
+    display: none; 
     max-width: 90%;
   }
 
@@ -271,7 +271,7 @@ body {
     .container,
     .bd-grid {
         width: 100%;
-        /* Asegúrate de que los contenedores no se desborden */
+        
     }
 
     .nav__menu {
@@ -312,7 +312,7 @@ body {
 @media screen and (max-width: 600px) {
     .nav__menu {
         width: 100%;
-        /* Asegúrate de que el menú no se desborde */
+        
     }
 
     .slider,
@@ -320,12 +320,12 @@ body {
     .container,
     .bd-grid {
         width: 100%;
-        /* Asegúrate de que los contenedores no se desborden */
+        
     }
 
     .nav__title {
         font-size: 0.9rem;
-        /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+       
         margin-top: 5px;
     }
 
@@ -367,7 +367,7 @@ body {
 @media screen and (max-width: 480px) {
     .nav__menu {
         width: 100%;
-        /* Asegúrate de que el menú no se desborde */
+        
     }
 
     .slider,
@@ -375,12 +375,12 @@ body {
     .container,
     .bd-grid {
         width: 100%;
-        /* Asegúrate de que los contenedores no se desborden */
+       
     }
 
     .nav__title {
         font-size: 0.8rem;
-        /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+       
         margin-top: 5px;
     }
 

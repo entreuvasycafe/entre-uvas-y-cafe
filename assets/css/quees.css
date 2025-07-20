@@ -230,9 +230,9 @@
 
     .container_cards .card {
         flex: 1 1 100%;
-        max-width: 90%;
+        max-width: 85%;
         margin: 10px 0;
-        height: 450px;
+        height: 430px;
     }
 
     .container_cards .card img {
