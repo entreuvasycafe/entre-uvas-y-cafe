@@ -161,12 +161,11 @@
 }
 
 /* Botones de categorías */
-.botones-categorias {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.botones-categorias-scroll {
+ display: flex;
+  overflow-x: auto;
   gap: 10px;
-  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .btn-categoria {
