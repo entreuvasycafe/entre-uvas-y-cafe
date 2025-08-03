@@ -38,13 +38,13 @@ async function cargarProductos() {
 
   querySnapshot.forEach((doc) => {
     const data = doc.data();
-   const categoria = (data.categoria || "").trim(); // ← Usamos la versión limpia
+   const categoria = (data.categoria || "").trim(); 
 if (!productosPorCategoria[categoria]) {
   productosPorCategoria[categoria] = [];
 }
 productosPorCategoria[categoria].push(data);
   });
-// 🔍 Agrega los logs aquí
+
   console.log("Categorías cargadas:", Object.keys(productosPorCategoria));
   console.log("Contenido de 'Otros':", productosPorCategoria["Otros"]);
   crearBotonesCategorias(); // crea los botones
@@ -56,7 +56,7 @@ function crearBotonesCategorias() {
 
   const botonTodos = document.createElement("button");
   botonTodos.textContent = "TODOS";
-  botonTodos.classList.add("btn-categoria", "activo"); // activo por defecto
+  botonTodos.classList.add("btn-categoria", "activo"); 
   botonTodos.onclick = () => {
     mostrarProductos();
     marcarBotonActivo(botonTodos);
@@ -66,7 +66,7 @@ function crearBotonesCategorias() {
   ordenCategorias.forEach((catNombre) => {
   if (productosPorCategoria[catNombre]) {
     const boton = document.createElement("button");
-    boton.textContent = catNombre.toUpperCase(); // solo para mostrar
+    boton.textContent = catNombre.toUpperCase(); 
     boton.classList.add("btn-categoria");
     boton.onclick = () => {
       mostrarProductos(catNombre);
