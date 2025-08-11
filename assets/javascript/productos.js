@@ -1,6 +1,5 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
 // Configuración de Firebase
 const firebaseConfig = {
@@ -38,17 +37,15 @@ async function cargarProductos() {
 
   querySnapshot.forEach((doc) => {
     const data = doc.data();
-   const categoria = (data.categoria || "").trim(); 
-if (!productosPorCategoria[categoria]) {
-  productosPorCategoria[categoria] = [];
-}
-productosPorCategoria[categoria].push(data);
+    const categoria = (data.categoria || "").trim();
+    if (!productosPorCategoria[categoria]) {
+      productosPorCategoria[categoria] = [];
+    }
+    productosPorCategoria[categoria].push(data);
   });
 
-  console.log("Categorías cargadas:", Object.keys(productosPorCategoria));
-  console.log("Contenido de 'Otros':", productosPorCategoria["Otros"]);
-  crearBotonesCategorias(); // crea los botones
-  mostrarProductos(); // muestra todos al inicio
+  crearBotonesCategorias();
+  mostrarProductos();
 }
 
 function crearBotonesCategorias() {
@@ -56,7 +53,7 @@ function crearBotonesCategorias() {
 
   const botonTodos = document.createElement("button");
   botonTodos.textContent = "TODOS";
-  botonTodos.classList.add("btn-categoria", "activo"); 
+  botonTodos.classList.add("btn","btn-personalizado", "me-2", "mb-2", "activo");
   botonTodos.onclick = () => {
     mostrarProductos();
     marcarBotonActivo(botonTodos);
@@ -64,17 +61,17 @@ function crearBotonesCategorias() {
   contenedorBotones.appendChild(botonTodos);
 
   ordenCategorias.forEach((catNombre) => {
-  if (productosPorCategoria[catNombre]) {
-    const boton = document.createElement("button");
-    boton.textContent = catNombre.toUpperCase(); 
-    boton.classList.add("btn-categoria");
-    boton.onclick = () => {
-      mostrarProductos(catNombre);
-      marcarBotonActivo(boton);
-    };
-    contenedorBotones.appendChild(boton);
-  }
-});
+    if (productosPorCategoria[catNombre]) {
+      const boton = document.createElement("button");
+      boton.textContent = catNombre.toUpperCase();
+      boton.classList.add("btn","btn-personalizado", "me-2", "mb-2");
+      boton.onclick = () => {
+        mostrarProductos(catNombre);
+        marcarBotonActivo(boton);
+      };
+      contenedorBotones.appendChild(boton);
+    }
+  });
 }
 
 function marcarBotonActivo(botonSeleccionado) {
@@ -82,67 +79,74 @@ function marcarBotonActivo(botonSeleccionado) {
   botones.forEach((btn) => btn.classList.remove("activo"));
   botonSeleccionado.classList.add("activo");
 }
-
 function mostrarProductos(filtrarCategoria = null) {
   contenedor.innerHTML = "";
 
   const categorias = filtrarCategoria
     ? [filtrarCategoria]
-     : ordenCategorias.filter(cat => productosPorCategoria[cat]);
+    : ordenCategorias.filter(cat => productosPorCategoria[cat]);
 
   categorias.forEach((categoria) => {
     if (!productosPorCategoria[categoria]) return;
 
-    const categoriaContenedor = document.createElement("div");
-    categoriaContenedor.classList.add("categoria-contenedor");
-
     if (!filtrarCategoria) {
       const tituloCategoria = document.createElement("h3");
-      tituloCategoria.classList.add("categoria-titulo");
+      tituloCategoria.classList.add("mb-4");
       tituloCategoria.textContent = categoria;
-      categoriaContenedor.appendChild(tituloCategoria);
+      contenedor.appendChild(tituloCategoria);
     }
 
     const productosGrid = document.createElement("div");
-    productosGrid.classList.add("productos-grid");
+    productosGrid.classList.add("row", "row-cols-1", "row-cols-md-2", "g-4");
+    productosGrid.setAttribute("data-categoria", categoria);
 
     productosPorCategoria[categoria].forEach((producto) => {
       const item = document.createElement("div");
-      item.classList.add("diseño__item");
+      item.classList.add("col");
 
-      const imgDiv = document.createElement("div");
-      imgDiv.classList.add("diseño__img");
+      const card = document.createElement("div");
+      card.classList.add("card", "h-100", "shadow", "d-flex", "flex-row");
 
       const img = document.createElement("img");
       img.src = producto.imagen;
       img.alt = producto.titulo;
-      imgDiv.appendChild(img);
+      img.classList.add("img-fluid", "rounded");
+      img.style.maxWidth = "150px";
+      img.style.width = "100%";
+      img.style.height = "150px";
+      img.style.objectFit = "cover";
 
-      const contenidoDiv = document.createElement("div");
-      contenidoDiv.classList.add("diseño__contenido");
+      const cardBody = document.createElement("div");
+      cardBody.classList.add("card-body");
 
-      const titulo = document.createElement("h3");
+      const titulo = document.createElement("h5");
+      titulo.classList.add("card-title");
       titulo.textContent = producto.titulo;
 
       const descripcion = document.createElement("p");
+      descripcion.classList.add("card-text");
       descripcion.textContent = producto.descripcion;
 
-      const precio = document.createElement("div");
+      const precio = document.createElement("p");
       precio.classList.add("precio");
       precio.textContent = `$${producto.precio}`;
 
-      contenidoDiv.appendChild(titulo);
-      contenidoDiv.appendChild(descripcion);
-      contenidoDiv.appendChild(precio);
+      cardBody.appendChild(titulo);
+      cardBody.appendChild(descripcion);
+      cardBody.appendChild(precio);
 
-      item.appendChild(contenidoDiv);
-      item.appendChild(imgDiv);
+      card.appendChild(img);
+      card.appendChild(cardBody);
 
+      item.appendChild(card);
       productosGrid.appendChild(item);
     });
 
-    categoriaContenedor.appendChild(productosGrid);
-    contenedor.appendChild(categoriaContenedor);
+    contenedor.appendChild(productosGrid);
   });
 }
+
+
+
+
 cargarProductos();

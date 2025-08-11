@@ -1,0 +1,155 @@
+h1,h2,h3,h5{
+    color: #5936a2 !important;
+}
+
+@media (max-width: 991.98px) {
+  /* Menú desplegado en móvil */
+  h1 {
+    display: none;
+  }
+  nav.navbar.fixed-top {
+    height: auto;
+  }
+  .navbar-collapse {
+    background-color: #6f42c1; /* Morado */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .offcanvas-body {
+    padding-top: 75px;
+    display: flex;
+    justify-content: flex-start; /* alinea a la derecha */
+    gap: 1rem; /* espacio entre iconos */
+  }
+
+  /* SUBIR el contenido del carrusel */
+  #carouselHome .carousel-caption {
+    bottom: 20%; /* sube el contenido */
+  }
+  #carouselHome .carousel-caption h4,
+  #carouselHome .carousel-caption p {
+    font-size: 1.5rem; /* texto más pequeño en móvil */
+  }
+  #carouselHome .carousel-caption .btn {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    
+  }
+   #carouselHome .carousel-item {
+    height: 65vh; /* más bajo en móvil */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.carousel-caption h4.animate__animated {
+  --animate-duration: 1.2s;
+  --animate-delay: 0.2s;
+}
+
+.carousel-caption p.animate__animated {
+  --animate-duration: 1.5s;
+  --animate-delay: 0.6s;
+}
+
+.carousel-caption a.btn.animate__animated {
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+}
+
+/* Flechas con filtro para color morado */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+filter: invert(15%) sepia(80%) saturate(800%) hue-rotate(260deg) brightness(40%) contrast(90%);
+}
+
+/* Indicadores */
+.carousel-indicators button {
+  background-color: #7a4ca3;
+  opacity: 0.7;
+}
+
+.carousel-indicators .active {
+  background-color: #4b2c71;
+  opacity: 1;
+}
+
+.card {
+  background-color: #efe4fa;
+}
+
+.padingx {
+  padding-top: 120px !important;
+}
+.navbar {
+    
+  height: 80px;
+  overflow: visible; /* para que el logo pueda sobresalir sin ser cortado */
+ 
+}
+.navbar-nav {
+  margin-top: -50px; /* mueve el menú 10px hacia arriba */
+}
+.contain_logo{
+      margin-top: -45px; /* mueve el menú 10px hacia arriba */
+}
+
+.navbar-brand img {
+  width: 140px;    /* más grande que el navbar */
+  height: 140px;
+  position: relative;
+  top: 5px;     /* sube el logo hacia arriba para sobresalir */
+  z-index: 1050;  /* para que quede encima */
+}
+
+.carousel-caption {
+margin-bottom: 150px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;  /* centra vertical */
+  align-items: center;      /* centra horizontal */
+  background-color: rgba(117, 71, 161, 0.6); /* fondo semi-transparente morado */
+  padding: 2rem;
+  text-align: center; /* texto centrado */
+}
+
+.btn-personalizado {
+  background-color: #6f42c1; /* morado */
+  color: white;
+  border: 1px solid #6f42c1;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-personalizado:hover,
+.btn-personalizado:focus {
+  background-color: #5936a2; /* morado oscuro */
+  border-color: #5936a2;
+  color: white;
+  outline: none;
+}
+.btn-personalizado.activo {
+  background-color: #e4d0f7;
+  border-color: #6f42c1;
+  color: white;
+}
+
+.footer{
+     background-color: #5a4864!important; 
+}

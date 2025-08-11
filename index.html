@@ -2,30 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entre Uvas y Café</title>
-    <!-- Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/img/icono.png">
-    <!-- Librerías externas de íconos (cargar antes de tus estilos por si los usas en tu CSS) -->
+    <title>Entre Uvas y Café</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
-    <!-- CSS Base y generales -->
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <!-- CSS de componentes o secciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/nuevo.css">
     <link rel="stylesheet" href="assets/css/whatsapp.css">
-    <link rel="stylesheet" href="assets/css/carrusel.css">
-    <link rel="stylesheet" href="assets/css/quees.css">
-    <link rel="stylesheet" href="assets/css/product.css">
-    <link rel="stylesheet" href="assets/css/contacto.css">
-    <link rel="stylesheet" href="assets/css/ubicacion.css">
 </head>
-<body>
+<body class="bg-light m-0 p-0" >
+    <div class="container-fluid px-0" style="overflow-x: hidden; padding-top:70px;">
+    <!-- Aquí va todo tu contenido -->
     <!--===== WHATSAPP FLOTANTE =====-->
     <div class="nav-bottom">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
         <div class="popup-whatsapp fadeIn">
             <div class="content-whatsapp -top">
                 <button type="button" class="closePopup">
@@ -47,168 +43,250 @@
         </div>
         <button type="button" id="whats-openPopup" class="whatsapp-button">
             <div class="float">
-                <i class="fa fa-whatsapp my-float"></i>
+                <i class="fa-brands fa-whatsapp my-float"></i>
             </div>
         </button>
         <div class="circle-anime"></div>
     </div>
     <!--===== FIN WHATSAPP FLOTANTE =====-->
     <!--===== INICIO HEADER =====-->
-    <header class="header">
-        <nav class="nav bd-grid">
-            
-            <div class="nav__logo">
-                <a href="#">
-                    <img src="assets/img/icono.png" alt="Logo Entre Uvas y Café">
-                </a>
-               <h1>Entre Uvas y Café</h1>  
-            </div>
-           
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#quienes" class="nav__link">¿QUIENES SOMOS?</a></li>
-                    <li class="nav__item"><a href="#servicios" class="nav__link">SERVICIOS</a></li>
-                    <li class="nav__item"><a href="#productos" class="nav__link">PRODUCTOS</a></li>
-                    <li class="nav__item"><a href="#opiniones" class="nav__link">OPINIONES</a></li>
-                    <li class="nav__item"><a href="#ubicacion" class="nav__link">UBICACIÓN</a></li>
-                    <li class="nav__item"><a href="#contacto" class="nav__link">CONTACTO</a>
-                       
-                    </li>
-                    <li class="nav__item">
-                        <button class="boton cuatro">
-                            <span><a href="https://entreuvasycafe.github.io/admin-entreuvasycafe/ " class="nav__link">
-                                    <font color="#fff">Iniciar Sesión</font>
-                                </a></span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
+    <header>
+  <nav class="navbar fixed-top navbar-light bg-light">
+  <div class="container d-flex align-items-center">
+    <div class="contain_logo">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assets/img/icono.png" alt="Logo Entre Uvas y Café" width="70" height="70" class="me-2">
+      <h1 class="h5 mb-0">Entre Uvas y Café</h1>
+    </a>
+    </div>
+    <!-- Logo + Título -->
+  
+
+    <!-- Botón hamburguesa SOLO móvil -->
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+      aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú visible SOLO escritorio -->
+    <div class="d-none d-lg-flex ms-auto align-items-center">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item me-3"><a class="nav-link" href="#quienes">¿QUIENES SOMOS?</a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="#servicios">SERVICIOS</a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="#productos">PRODUCTOS</a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="#opiniones">OPINIONES</a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="#ubicacion">UBICACIÓN</a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+        <li class="nav-item">
+          <a href="https://entreuvasycafe.github.io/admin-entreuvasycafe/" class="btn btn-personalizado text-white ms-lg-3">Iniciar Sesión</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Offcanvas menú para móvil -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel"></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#quienes" data-bs-dismiss="offcanvas">¿QUIENES SOMOS?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios" data-bs-dismiss="offcanvas">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos" data-bs-dismiss="offcanvas">PRODUCTOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#opiniones" data-bs-dismiss="offcanvas">OPINIONES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ubicacion" data-bs-dismiss="offcanvas">UBICACIÓN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto" data-bs-dismiss="offcanvas">CONTACTO</a></li>
+          <li class="nav-item mt-3">
+            <a href="https://entreuvasycafe.github.io/admin-entreuvasycafe/" class="btn btn-personalizado w-100 text-white">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+</header>
+
     <!--===== FIN HEADER ordenado hasta aqui =====-->
     <main class="l-main">
         <!--===== INICIO HOGAR =====-->
-        <section class="home">
-  <div class="slider">
-    <div class="slide active" style="background-image: url('assets/img/slider3.1_optimizada.jpg')">
-      <div class="container">
-        <div class="caption">
-          <h2>EL MEJOR CAFÉ PARA TU DÍA</h2>
-          <p>Empieza tu jornada con el <span class="highlight">aroma perfecto</span> y el sabor inigualable de nuestro café de especialidad.</p>
-          <a class="" href="#contacto">Contáctanos</a>
+        <section id="home">
+  <div id="carouselHome" class="carousel slide " data-bs-ride="carousel">
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active" style="background-image: url('assets/img/slider3.1_optimizadaa.jpg'); background-size: cover; background-position: center; height: 90vh;">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="animate__animated animate__zoomIn">EL MEJOR CAFÉ PARA TU DÍA</h4>
+          <p class="animate__animated animate__zoomIn">Empieza tu jornada con el <span class="fw-bold">aroma perfecto</span> y el sabor inigualable de nuestro café de especialidad.</p>
+          <a href="#contacto" class="btn btn-personalizado animate__animated animate__zoomIn">Contáctanos</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="background-image: url('assets/img/slider3.2.jpeg'); background-size: cover; background-position: center; height: 90vh;">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="animate__animated animate__zoomIn">DULCES MOMENTOS</h4>
+          <p class="animate__animated animate__zoomIn">Disfruta de nuestra <span class="fw-bold">pastelería artesanal</span>, el complemento ideal para una experiencia única.</p>
+          <a href="#contacto" class="btn btn-personalizado animate__animated animate__zoomIn">Contáctanos</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="background-image: url('assets/img/WhatsApp\ Image\ 2025-04-21\ at\ 9.17.45\ AM\ \(1\).jpeg'); background-size: cover; background-position: center; height: 90vh;">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="animate__animated animate__zoomIn">UN ESPACIO PARA COMPARTIR</h4>
+          <p class="animate__animated animate__zoomIn">Ven a nuestro acogedor rincón y vive momentos especiales con quienes más quieres.</p>
+          <a href="#contacto" class="btn btn-personalizado animate__animated animate__zoomIn">Contáctanos</a>
         </div>
       </div>
     </div>
 
-    <div class="slide" style="background-image: url('assets/img/slider3.2.jpeg')">
-      <div class="container">
-        <div class="caption">
-          <h2>DULCES MOMENTOS</h2>
-          <p>Disfruta de nuestra <span class="highlight">pastelería artesanal</span>, el complemento ideal para una experiencia única.</p>
-          <a href="#contacto">Contáctanos</a>
-        </div>
-      </div>
-    </div>
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
 
-    <div class="slide" style="background-image: url('assets/img/slide-1.jpg')">
-      <div class="container">
-        <div class="caption">
-          <h2>UN ESPACIO PARA COMPARTIR</h2>
-          <p>Ven a nuestro acogedor rincón y vive momentos especiales con quienes más quieres.</p>
-          <a href="#contacto">Contáctanos</a>
-        </div>
-      </div>
-    </div>
   </div>
+</section>
 
-  <!-- Controles -->
-  <div class="controls">
-    <div class="prev">&#10094;</div>
-    <div class="next">&#10095;</div>
-  </div>
-
-  <!-- Indicadores -->
-  <div class="indicator"></div>
- </section>
         <!--===== FIN HOGAR =====-->
         <!--===== INICIO QUE ES =====-->
-        <section class="seccion quienes" id="quienes">
-            <div class="quienes__contenido">
-                <h2 class="seccion-titulo quienes__titulo">¿QUIÉNES SOMOS?</h2>
-                <p class="quienes__historia">
-                   Somos un emprendimiento familiar con el corazón puesto en la pastelería artesanal,
-                    donde cada receta refleja nuestra pasión y dedicación. Nos especializamos en la elaboración propia de exquisitos pasteles y dulces,
-                     preparados con ingredientes de calidad y mucho cariño.
-                     Además de nuestra pastelería, contamos con un acogedor espacio de cafetería, pensado para que nuestros clientes puedan quedarse,
-                    compartir y acompañar nuestros productos con un buen café.
-                    Somos más que una pastelería: somos un lugar donde la dulzura, el sabor y la buena compañía se encuentran.
-                </p>
+        <section id="quienes" class="py-5 padingx">
+    <div class="container">
+        <!-- Título -->
+        <h2 class="text-center mb-4">¿QUIÉNES SOMOS?</h2>
+
+        <!-- Descripción -->
+        <p class="text-center mb-5">
+            Somos un emprendimiento familiar con el corazón puesto en la pastelería artesanal,
+            donde cada receta refleja nuestra pasión y dedicación. Nos especializamos en la elaboración propia de exquisitos pasteles y dulces,
+            preparados con ingredientes de calidad y mucho cariño.
+            Además de nuestra pastelería, contamos con un acogedor espacio de cafetería, pensado para que nuestros clientes puedan quedarse,
+            compartir y acompañar nuestros productos con un buen café.
+            Somos más que una pastelería: somos un lugar donde la dulzura, el sabor y la buena compañía se encuentran.
+        </p>
+
+        <!-- Contenido -->
+        <div class="row align-items-center">
+            <!-- Imagen -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="assets/img/WhatsApp Image 2025-04-21 at 9.17.50 AM.JPG"  alt="Imagen quienes somos" class="img-fluid rounded shadow" style="width: 400px; height: 450px; object-fit: cover;">
             </div>
-            <div class="quienes__container">
-              
-                <div class="quienes__info">
-                    <div class="quienes__foto">
-                        <img src="assets/img/WhatsApp Image 2025-04-21 at 9.17.50 AM.JPG" alt="Imagen quienes somos">
+
+            <!-- Equipo -->
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="card-title">Daniela Araya</h3>
+                        <h6 class="card-subtitle text-muted mb-2">Fundadora & Titulada en el área Gastronómica</h6>
+                        <p class="card-text">
+                            Lidera con entusiasmo la elaboración artesanal de los productos y tiene una clara orientación a ofrecer
+                            calidad y calidez en cada detalle del local.
+                        </p>
                     </div>
                 </div>
-                <!-- Columna derecha (equipo) -->
-                <div class="quienes__equipo">
-                    <div class="quienes__card">
-                        <h3 class="quienes__nombre">Daniela Araya</h3>
-                        <p class="quienes__rol">Fundadora & Titulada en el area Gastronomica</p>
-                        <p class="quienes__desc">lidera con entusiasmo la elaboración artesanal de los productos y tiene una clara orientación a ofrecer
-                             calidad y calidez en cada detalle del local..</p>
-                    </div>
-                    <div class="quienes__card">
-                        <h3 class="quienes__nombre">Carlos Rivas</h3>
-                        <p class="quienes__rol">Cofundador & Sommelier de Té</p>
-                        <p class="quienes__desc">de origen colombiano, aporta una mirada distinta y complementaria,
-                             especialmente en lo relacionado con la cultura cafetera.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="seccion servicios centrado" id="servicios">
-            <h2 class="seccion-titulo">SERVICIOS</h2>
-            <div class="beneficios__container bd-grid">
-                <div class="container_cards">
-                    <div class="card">
-                        <img class="beneficios__img" src="assets/img/cafe.avif">
-                        <h3 class="beneficios__subtitulo">Cafetería</h3>
-                        <p class="beneficios__texto">Disfruta de una cuidada selección de cafés y tés de alta
-                            calidad,
-                            preparados con dedicación para resaltar cada sabor y aroma.</p>
-                    </div>
-                    <div class="card">
-                        <img class="beneficios__img" src="assets/img/galeria-1.png">
-                        <h3 class="beneficios__subtitulo">Pastelería Artesanal</h3>
-                        <p class="beneficios__texto">Acompaña tu bebida favorita con una variedad de postres y
-                            pastelería casera, elaborados con ingredientes naturales.</p>
-                    </div>
-                    <div class="card">
-                        <img class="beneficios__img" src="assets/img/slide1.1.jpeg">
-                        <h3 class="beneficios__subtitulo">Ambiente Acogedor</h3>
-                        <p class="beneficios__texto">Un espacio pensado para la comodidad y el disfrute, ideal
-                            para
-                            relajarte o compartir un buen momento.</p>
-                    </div>
-                    <div class="card ">
-                        <img class="beneficios__img" src="assets/img/delivery.jpg">
-                        <h3 class="beneficios__subtitulo">Delivery</h3>
-                        <p class="beneficios__texto">Recibe tus productos favoritos en la comodidad de tu hogar con
-                            nuestro servicio de delivery. Rápido, seguro.</p>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Carlos Rivas</h3>
+                        <h6 class="card-subtitle text-muted mb-2">Cofundador & Sommelier de Té</h6>
+                        <p class="card-text">
+                            De origen colombiano, aporta una mirada distinta y complementaria,
+                            especialmente en lo relacionado con la cultura cafetera.
+                        </p>
                     </div>
                 </div>
             </div>
-           <a href="#contacto" class="btn-servicios" >Reservar o consultar</a>
-            
-        </section>
+        </div>
+    </div>
+</section>
+
+        <section id="servicios" class="py-5 bg-light">
+    <div class="container padingx">
+        <!-- Título -->
+        <h2 class="text-center mb-5">SERVICIOS</h2>
+
+        <!-- Cards -->
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="assets/img/WhatsApp Image 202.jpeg" class="card-img-top" alt="Cafetería">
+                    <div class="card-body">
+                        <h5 class="card-title">Cafetería</h5>
+                        <p class="card-text">
+                            Disfruta de una cuidada selección de cafés y tés de alta calidad,
+                            preparados con dedicación para resaltar cada sabor y aroma.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="assets/img/galeria-1.png" class="card-img-top" alt="Pastelería Artesanal">
+                    <div class="card-body">
+                        <h5 class="card-title">Pastelería Artesanal</h5>
+                        <p class="card-text">
+                            Acompaña tu bebida favorita con una variedad de postres y pastelería casera, elaborados con ingredientes naturales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="assets/img/slide1.1.jpeg" class="card-img-top" alt="Ambiente Acogedor">
+                    <div class="card-body">
+                        <h5 class="card-title">Ambiente Acogedor</h5>
+                        <p class="card-text">
+                            Un espacio pensado para la comodidad y el disfrute, ideal para relajarte o compartir un buen momento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="assets/img/delivery.jpg" class="card-img-top" alt="Delivery">
+                    <div class="card-body">
+                        <h5 class="card-title">Delivery</h5>
+                        <p class="card-text">
+                            Recibe tus productos favoritos en la comodidad de tu hogar con nuestro servicio de delivery. Rápido y seguro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón -->
+        <div class="text-center mt-4">
+            <a href="#contacto" class="btn btn-personalizado">Reservar o Consultar</a>
+        </div>
+    </div>
+</section>
+
         <!--===== INICIO PRODUCTOS =====-->
-        <div id="productos" class="seccion centrado">
-            <h2 class="seccion-titulo">PRODUCTOS DISPONIBLES</h2>
+        <div id="productos" class="container my-5 padingx">
+            <div class="">
+             <h2 class="text-center mb-5">PRODUCTOS DISPONIBLES</h2>
+            </div>
+            
             <section id="botones-categorias" class=" botones-categorias-scroll"></section>
            
             <section class="" id="contenedor-productos">
@@ -216,176 +294,217 @@
         </div>
         <!--===== FIN PRODUCTOS =====-->
         <!--===== INICIO OPINIONES DE CLIENTES =====-->
-        <section class="seccion opiniones centrado" id="opiniones">
-            <h2 class="seccion-titulo">OPINIONES DE CLIENTES</h2>
-            <div class="opiniones__container ">
-               
-                <div class="opinion__card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/9526/9526392.png" alt="Cliente 1"
-                        class="opinion__img">
-                    <h3 class="opinion__nombre">Madeline F</h3>
-                    <p class="opinion__texto">Exquisito todo, tienen opciones individuales para servir ahí y también
-                        familiares, se nota que todo es muy fresco y como hecho en casa.
-                        Destaco el pie de limón y el carrot cake, ah! Y las galletas! Me falta probar otros dulces, pero
-                        también tienen salados, las empanadas deliciosas. Finalmente el barista de café se maneja muy
-                        bien!
-                        Gran calidad de café y muy buen servicio..</p>
-                    <div class="estrellas">
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                    </div>
-                </div>
-                
-                <div class="opinion__card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/9037/9037234.png" alt="Cliente 2"
-                        class="opinion__img">
-                    <h3 class="opinion__nombre">Jaqueline V</h3>
-                    <p class="opinion__texto">
-                        ✨ Si andas por Cachagua… ¡no te puedes perder este lugar mágico! ✨
-                        Un rincón hermoso, acogedor y lleno de detalles lindos que te invitan a quedarte.
+        <section id="opiniones" class="py-5 ">
+    <div class="container padingx">
+        <!-- Título -->
+        <h2 class="text-center mb-5">OPINIONES DE CLIENTES</h2>
 
-                        ☕️ Café de especialidad con granos seleccionados (¡de verdad increíble!)
-                        🍰 Pasteles caseros hechos por sus propios dueños, con amor en cada bocado.</p>
-                    <div class="estrellas">
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                    </div>
-                </div>
-               
-                <div class="opinion__card">
-                    <img src="https://cdn-icons-png.freepik.com/512/9182/9182889.png" alt="Cliente 3"
-                        class="opinion__img">
-                    <h3 class="opinion__nombre">Camilo S</h3>
-                    <p class="opinion__texto">Excelente, el mejor café de la zona y a muy buen precio. Muy amable el
-                        personal,
-                        la mejor carrot cake que he comido hace tiempo.</p>
-                    <div class="estrellas">
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
-                        <span class="estrella">★</span>
+        <!-- Cards -->
+        <div class="row g-4">
+            <!-- Opinión 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 text-center p-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9526/9526392.png" alt="Cliente 1" class="mx-auto" style="width:80px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Madeline F</h5>
+                        <p class="card-text">
+                            Exquisito todo, tienen opciones individuales para servir ahí y también familiares,
+                            se nota que todo es muy fresco y como hecho en casa. Destaco el pie de limón y el carrot cake,
+                            ah! Y las galletas! Me falta probar otros dulces, pero también tienen salados, las empanadas deliciosas.
+                            Finalmente el barista de café se maneja muy bien! Gran calidad de café y muy buen servicio.
+                        </p>
+                        <div class="text-warning fs-5">★★★★★</div>
                     </div>
                 </div>
             </div>
-            <div class="slider-buttons">
-             <button id="btn-prev"> Anterior</button>
-             <button id="btn-next" >Siguiente </button>
+
+            <!-- Opinión 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 text-center p-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9037/9037234.png" alt="Cliente 2" class="mx-auto" style="width:80px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Jaqueline V</h5>
+                        <p class="card-text">
+                            ✨ Si andas por Cachagua… ¡no te puedes perder este lugar mágico! ✨
+                            Un rincón hermoso, acogedor y lleno de detalles lindos que te invitan a quedarte.
+                            ☕️ Café de especialidad con granos seleccionados (¡de verdad increíble!)
+                            🍰 Pasteles caseros hechos por sus propios dueños, con amor en cada bocado.
+                        </p>
+                        <div class="text-warning fs-5">★★★★★</div>
+                    </div>
+                </div>
             </div>
-        </section>
+
+            <!-- Opinión 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 text-center p-3">
+                    <img src="https://cdn-icons-png.freepik.com/512/9182/9182889.png" alt="Cliente 3" class="mx-auto" style="width:80px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Camilo S</h5>
+                        <p class="card-text">
+                            Excelente, el mejor café de la zona y a muy buen precio.
+                            Muy amable el personal, la mejor carrot cake que he comido hace tiempo.
+                        </p>
+                        <div class="text-warning fs-5">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!--===== FIN OPINIONES DE CLIENTES =====-->
         <!--===== INICIO UBICACIÓN =====-->
-        <section class="seccion ubicacion centrado" id="ubicacion">
-            <h2 class="seccion-titulo">UBICACIÓN</h2>
-            <div class="ubicacion__container bd-grid">
-                <div class="ubicacion__mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.7993803984957!2d-71.44797500024714!3d-32.576232731037145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689bbfb1b795cf9%3A0xedee69b66dc4575f!2sPasteler%C3%ADa%20artesanal%20Entre%20Uvas%20y%20Caf%C3%A9!5e0!3m2!1ses!2scl!4v1739656821867!5m2!1ses!2scl"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="ubicacion__horarios">
-                    <h3>Horarios de Atención</h3>
-                    <ul>
-                        <li><strong>Lunes a Domingo:</strong> 10:00 a 14:00 y 15:00 a 20:00</li>
-                        <li><strong>Verano:</strong> 10:00 a 14:00 y de 15:00 a 20:00</li>
-                        <li><strong>Invierno:</strong> 10:00 a 14:00 y de 15:00 a 18:00</li>
-                        <li><strong>Invierno se cierran los lunes.</strong> Durante el verano atendemos de lunes a
-                            domingo.</li>
-                    </ul>
-                    <p>Estamos ubicados en Avenida Cachagua #174, local B.</p>
-                </div>
+        <section id="ubicacion" class="py-5 padingx">
+    <div class="container">
+        <!-- Título -->
+        <h2 class="text-center mb-5">UBICACIÓN</h2>
+
+        <!-- Contenido -->
+        <div class="row g-4 align-items-center">
+            <!-- Mapa -->
+            <div class="col-12 col-lg-6 text-center">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.7993803984957!2d-71.44797500024714!3d-32.576232731037145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689bbfb1b795cf9%3A0xedee69b66dc4575f!2sPasteler%C3%ADa%20artesanal%20Entre%20Uvas%20y%20Caf%C3%A9!5e0!3m2!1ses!2scl!4v1739656821867!5m2!1ses!2scl"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-        </section>
+
+            <!-- Horarios -->
+            <div class="col-12 col-lg-6">
+                <h3 class="mb-3">Horarios de Atención</h3>
+                <ul class="list-unstyled">
+                    <li><strong>Lunes a Domingo:</strong> 10:00 a 14:00 y 15:00 a 20:00</li>
+                    <li><strong>Verano:</strong> 10:00 a 14:00 y 15:00 a 20:00</li>
+                    <li><strong>Invierno:</strong> 10:00 a 14:00 y 15:00 a 18:00</li>
+                    <li><strong>Invierno se cierran los lunes.</strong> Durante el verano atendemos de lunes a domingo.</li>
+                </ul>
+                <p class="mt-3">Estamos ubicados en <strong>Avenida Cachagua #174, local B</strong>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!--===== FIN UBICACIÓN =====-->
         <!--===== INICIO CONTACTO =====-->
-        <section class="seccion contacto centrado" id="contacto">
-            <h2 class="seccion-titulo">CONTACTO</h2>
-            <div class="container__contacto bd-grid">
-                <!-- FORMULARIO DE CONTACTO -->
-                <form id="formulario-contacto" class="contact__form">
-                    <!-- Honeypot oficial para evitar bots -->
-                    <input type="text" name="_honey" style="display: none;">
-                    <!-- Formsubmit config -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <!-- Campos del usuario con etiquetas -->
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="contact__input" required>
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" class="contact__input" required>
-                    <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="asunto" class="contact__input" required>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="10" class="contact__input" required></textarea>
-                    <button type="submit" class="contact__button button "
-                        style="background-color: #3e1663;">Enviar</button>
-                </form>
-            </div>
-        </section>
-        <script defer src="assets/javascript/contacto.js"></script>
+<!-- CONTACTO-->
+<section id="contacto" class="padingx py-5 bg-white">
+  <div class="container">
+    
+    
+    <div class="row justify-content-center">
+      
+      <div class="col-md-8">
+         
+ <form id="formulario-contacto" class="container p-4 rounded" style="background-color: #e5d4f5; max-width: 600px; margin: auto;">
+ <h2 class="text-center mb-4 text-brown" >Contáctanos</h2>
+
+  <!-- Nombre -->
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
+  </div>
+
+  <!-- Email -->
+  <div class="mb-3">
+    <label for="email" class="form-label">Correo electrónico</label>
+    <input type="email" id="email" name="email" class="form-control" placeholder="Tu correo" required>
+  </div>
+
+  <!-- Mensaje -->
+  <div class="mb-3">
+    <label for="mensaje" class="form-label">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="Tu mensaje" required></textarea>
+  </div>
+
+  <!-- 🛡️ Honeypot para evitar spam (oculto a usuarios) -->
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- 🧭 Previene la redirección (clave para usar fetch sin error) -->
+  <input type="hidden" name="_redirect" value="about:blank">
+
+  <!-- ✅ Formato de respuesta JSON -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <!-- Botón -->
+  <div class="text-center">
+    <button type="submit" class="btn btn-personalizado px-4 w-100">Enviar</button>
+  </div>
+</form>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIN CONTACTO -->
+
+<script defer src="assets/javascript/contacto.js"></script>
+
         <!--===== FIN CONTACTO =====-->
         <!--===== INICIO FOOTER ELEGANTE CON CONTACTO =====-->
-        <footer class="footer">
-            <div class="footer__container">
+       <footer class=" footer bg-dark text-light py-5">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            
+            <!-- Redes sociales -->
+            <div class="col-md-4 mb-4">
+                <h4 class="mb-3">Síguenos</h4>
                
-                <!-- Redes sociales -->
-                <div class="footer__social-section">
-                    <h4>Síguenos</h4>
-                    <div class="footer__social">
-                        <a href="https://www.facebook.com/profile.php?id=100070732844217" class="footer__icon">
-                            <i class='bx bxl-facebook'></i>
-                        </a>
-                        <a href="https://www.instagram.com/entreuvasycafe/" class="footer__icon">
-                            <i class='bx bxl-instagram'></i>
-                        </a>
-                        <a href="https://wa.me/56984230531?text=Hola!%20Necesito%20información!" class="footer__icon">
-                            <i class='bx bxl-whatsapp'></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Contacto -->
-                <div class="footer__contact-section">
-                    <h4>Contáctanos</h4>
-                    <p><i class='bx bx-map'></i>  Avenida Cachagua #174, local B, Chile</p>
-                    <p><i class='bx bx-envelope'></i> entreuvasycafe@gmail.com</p>
-                    <p><i class='bx bx-phone'></i> +56 9 8423 0531</p>
-                </div>
-                 <!-- Logo y nombre -->
-                <div class="footer__logo-section">
-                    
-                    <p class="footer__contact-section">“Entre Uvas y Café” es una cafetería en Zapallar 
-                        <br> que fusiona la pasión por el café con la repostería artesanal,<br>
-                         ofreciendo una experiencia cálida y auténtica.</p>
-                    <img src="assets/img/logo-footer.png" alt="Logo Entre Uvas y Café" class="footer__logo-img">
-                   
-                </div>
+                <div class="iconos-sociales">
+    <a href="https://www.facebook.com/profile.php?id=100070732844217" class="text-light fs-4"><i class='bx bxl-facebook'></i></a>
+    <a href="https://www.instagram.com/entreuvasycafe/" class="text-light fs-4"><i class='bx bxl-instagram'></i></a>
+    <a href="https://wa.me/56984230531?text=Hola!%20Necesito%20información!" class="text-light fs-4"><i class='bx bxl-whatsapp'></i></a>
+</div>
+            </div>
 
+            <!-- Contacto -->
+            <div class="col-md-4 mb-4">
+                <h4 class="mb-3">Contáctanos</h4>
+                <p><i class='bx bx-map'></i> Avenida Cachagua #174, local B, Chile</p>
+                <p><i class='bx bx-envelope'></i> entreuvasycafe@gmail.com</p>
+                <p><i class='bx bx-phone'></i> +56 9 8423 0531</p>
             </div>
-            <!-- Derechos reservados -->
-            <div class="footer__bottom">
-                <p>&#169; 2025 Todos los derechos reservados</p>
+
+            <!-- Logo y descripción -->
+            <div class="col-md-4 mb-4 text-center">
+                <p>“Entre Uvas y Café” es una cafetería en Zapallar que fusiona la pasión por el café con la repostería artesanal, ofreciendo una experiencia cálida y auténtica.</p>
+                <img src="assets/img/logo-footer.png" alt="Logo Entre Uvas y Café" class="img-fluid mt-2" style="max-width: 150px;">
             </div>
-        </footer>
+        </div>
+
+        <!-- Derechos reservados -->
+        <div class="text-center mt-4 pt-3 border-top border-secondary">
+            <p class="mb-0">&copy; 2025 Todos los derechos reservados </p>
+             <p class="mb-0">&copy; HG-developer </p>
+        </div>
+    </div>
+</footer>
+
         <!--===== FIN FOOTER =====-->
     </main>
+    </div>
     <!-- Librerías externas primero (por si tus scripts dependen de ellas) -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Scripts principales y de estructura general -->
-    <script defer src="assets/javascript/header.js"></script>
-    <!-- Scripts por sección o funcionalidad -->
+    
+    <!-- Scripts por sección o funcionalidad  -->
     <script defer src="assets/javascript/whatsapp.js"></script>
-    <script defer src="assets/javascript/carrusel.js"></script>
-    <script defer src="assets/javascript/opiniones.js"></script>
+    <script defer src="assets/javascript/header.js"></script>
+   
     <script defer src="assets/javascript/contacto.js"></script>
-    <!-- Scripts especiales o con módulos ES6 -->
+    <script defer src="assets/javascript/carrusel.js"></script> 
+    <!-- Scripts especiales o con módulos ES6
+     
+     <script defer src="assets/javascript/opiniones.js"></script>
+      -->
     <script type="module" src="assets/javascript/productos.js"></script>
+     
 </body>
 </html>

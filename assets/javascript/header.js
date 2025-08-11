@@ -1,26 +1,20 @@
-/*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
+document.querySelectorAll('#offcanvasMenu a.nav-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault(); // Evita el comportamiento por defecto
 
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle', 'nav-menu')
+    const targetId = link.getAttribute('href').substring(1); // Quita el # para obtener id
 
-/*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('.nav__link');
+    // Cierra el offcanvas
+    const offcanvasEl = document.getElementById('offcanvasMenu');
+    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+    bsOffcanvas.hide();
 
-function linkAction() {
-    /*Active link*/
-    navLink.forEach(n => n.classList.remove('active'));
-    this.classList.add('active');
-
-    /*Remove menu mobile*/
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
+    // Espera que termine el cierre del offcanvas para hacer scroll
+    offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, { once: true });
+  });
+});
