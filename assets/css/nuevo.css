@@ -12,6 +12,7 @@ h1,h2,h3,h5{
   }
   .navbar-collapse {
     background-color: #6f42c1; /* Morado */
+    
     position: absolute;
     top: 80px;
     left: 0;
@@ -35,13 +36,13 @@ h1,h2,h3,h5{
   .offcanvas-body {
     padding-top: 75px;
     display: flex;
-    justify-content: flex-start; /* alinea a la derecha */
+    justify-content: flex-end; /* alinea a la derecha */
     gap: 1rem; /* espacio entre iconos */
   }
 
   /* SUBIR el contenido del carrusel */
   #carouselHome .carousel-caption {
-    bottom: 20%; /* sube el contenido */
+    bottom: 15%; /* sube el contenido */
   }
   #carouselHome .carousel-caption h4,
   #carouselHome .carousel-caption p {
@@ -121,6 +122,7 @@ filter: invert(15%) sepia(80%) saturate(800%) hue-rotate(260deg) brightness(40%)
 
 .carousel-caption {
 margin-bottom: 150px;
+border-radius: 10px;
   display: flex !important;
   flex-direction: column;
   justify-content: center;  /* centra vertical */
