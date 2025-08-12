@@ -8,7 +8,26 @@ h1,h2,h3,h5{
     display: none;
   }
   nav.navbar.fixed-top {
-    height: auto;
+    height: 90px;
+  }
+   #botones-categorias {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .botones-scroll {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .botones-scroll .btn {
+    flex: 0 0 auto; /* Evita que se estiren */
+    padding: 0.4rem 0.8rem; /* Botón más compacto */
+    font-size: 0.85rem; /* Texto más pequeño */
+    border-radius: 6px; /* Esquinas suaves */
   }
   .navbar-collapse {
     background-color: #6f42c1; /* Morado */
@@ -78,7 +97,7 @@ h1,h2,h3,h5{
 /* Flechas con filtro para color morado */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-filter: invert(15%) sepia(80%) saturate(800%) hue-rotate(260deg) brightness(40%) contrast(90%);
+    filter: invert(15%) sepia(80%) saturate(800%) hue-rotate(260deg) brightness(40%) contrast(90%);
 }
 
 /* Indicadores */
@@ -132,6 +151,10 @@ border-radius: 10px;
   text-align: center; /* texto centrado */
 }
 
+#offcanvasMenu {
+  width: 330px;
+}
+
 .btn-personalizado {
   background-color: #6f42c1; /* morado */
   color: white;
@@ -150,6 +173,21 @@ border-radius: 10px;
   background-color: #e4d0f7;
   border-color: #6f42c1;
   color: white;
+}
+.botones-scroll {
+  display: flex;
+  flex-wrap: nowrap; /* No saltar de línea */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Desplazamiento suave en móvil */
+  gap: 0.5rem; /* Espaciado entre botones */
+}
+
+.botones-scroll::-webkit-scrollbar {
+  display: none; /* Ocultar barra de desplazamiento en móvil */
+}
+.card-img-padded {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .footer{

@@ -49,6 +49,8 @@ async function cargarProductos() {
 }
 
 function crearBotonesCategorias() {
+  // Agregar clase para scroll
+  contenedorBotones.classList.add("botones-scroll");
   contenedorBotones.innerHTML = "";
 
   const botonTodos = document.createElement("button");
@@ -110,7 +112,7 @@ function mostrarProductos(filtrarCategoria = null) {
       const img = document.createElement("img");
       img.src = producto.imagen;
       img.alt = producto.titulo;
-      img.classList.add("img-fluid", "rounded");
+      img.classList.add("img-fluid", "rounded", "card-img-padded");
       img.style.maxWidth = "150px";
       img.style.width = "100%";
       img.style.height = "150px";
