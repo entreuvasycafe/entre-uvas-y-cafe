@@ -2,6 +2,8 @@ h1,h2,h3,h5{
     color: #5936a2 !important;
 }
 
+
+
 @media (max-width: 991.98px) {
   /* Menú desplegado en móvil */
   h1 {
@@ -24,10 +26,10 @@ h1,h2,h3,h5{
   }
 
   .botones-scroll .btn {
-    flex: 0 0 auto; /* Evita que se estiren */
-    padding: 0.4rem 0.8rem; /* Botón más compacto */
-    font-size: 0.85rem; /* Texto más pequeño */
-    border-radius: 6px; /* Esquinas suaves */
+    flex: 0 0 auto; 
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem; 
+    border-radius: 6px; 
   }
   .navbar-collapse {
     background-color: #6f42c1; /* Morado */
@@ -55,17 +57,17 @@ h1,h2,h3,h5{
   .offcanvas-body {
     padding-top: 75px;
     display: flex;
-    justify-content: flex-end; /* alinea a la derecha */
+    justify-content: flex-end; 
     gap: 1rem; /* espacio entre iconos */
   }
 
   /* SUBIR el contenido del carrusel */
   #carouselHome .carousel-caption {
-    bottom: 15%; /* sube el contenido */
+    bottom: 15%; 
   }
   #carouselHome .carousel-caption h4,
   #carouselHome .carousel-caption p {
-    font-size: 1.5rem; /* texto más pequeño en móvil */
+    font-size: 1.5rem; 
   }
   #carouselHome .carousel-caption .btn {
     padding: 6px 14px;
@@ -77,6 +79,14 @@ h1,h2,h3,h5{
     background-size: cover;
     background-position: center;
   }
+.card-img-top {
+  height: 350px; 
+  object-fit: cover;
+}
+#opinionesCarousel .card {
+  height: 410px !important; 
+}
+
 }
 
 .carousel-caption h4.animate__animated {
@@ -116,7 +126,7 @@ h1,h2,h3,h5{
 }
 
 .padingx {
-  padding-top: 120px !important;
+  padding-top: 110px !important;
 }
 .navbar {
     
@@ -125,17 +135,17 @@ h1,h2,h3,h5{
  
 }
 .navbar-nav {
-  margin-top: -50px; /* mueve el menú 10px hacia arriba */
+  margin-top: -50px; /* mueve el menú  hacia arriba */
 }
 .contain_logo{
-      margin-top: -45px; /* mueve el menú 10px hacia arriba */
+      margin-top: -45px; /* mueve el logo  hacia arriba */
 }
 
 .navbar-brand img {
-  width: 140px;    /* más grande que el navbar */
+  width: 140px;   
   height: 140px;
   position: relative;
-  top: 5px;     /* sube el logo hacia arriba para sobresalir */
+  top: 5px;     
   z-index: 1050;  /* para que quede encima */
 }
 
@@ -144,19 +154,25 @@ margin-bottom: 150px;
 border-radius: 10px;
   display: flex !important;
   flex-direction: column;
-  justify-content: center;  /* centra vertical */
-  align-items: center;      /* centra horizontal */
+  justify-content: center;  
+  align-items: center;     
   background-color: rgba(117, 71, 161, 0.6); /* fondo semi-transparente morado */
   padding: 2rem;
-  text-align: center; /* texto centrado */
+  text-align: center;
 }
 
 #offcanvasMenu {
   width: 330px;
 }
+ .container .col-lg-8 p {
+    font-size: 1rem; 
+    line-height: 1.2;
+
+    margin-left: auto;
+    margin-right: auto;}
 
 .btn-personalizado {
-  background-color: #6f42c1; /* morado */
+  background-color: #6f42c1; 
   color: white;
   border: 1px solid #6f42c1;
   transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -164,7 +180,7 @@ border-radius: 10px;
 
 .btn-personalizado:hover,
 .btn-personalizado:focus {
-  background-color: #5936a2; /* morado oscuro */
+  background-color: #5936a2; 
   border-color: #5936a2;
   color: white;
   outline: none;
@@ -174,12 +190,16 @@ border-radius: 10px;
   border-color: #6f42c1;
   color: white;
 }
+.precio{
+ color: #5936a2 ;   
+font-weight: 600;
+}
 .botones-scroll {
   display: flex;
-  flex-wrap: nowrap; /* No saltar de línea */
+  flex-wrap: nowrap; 
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* Desplazamiento suave en móvil */
-  gap: 0.5rem; /* Espaciado entre botones */
+  gap: 0.5rem; 
 }
 
 .botones-scroll::-webkit-scrollbar {
@@ -188,6 +208,14 @@ border-radius: 10px;
 .card-img-padded {
   margin-top: 10px;
   margin-left: 10px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .footer{
